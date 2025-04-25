@@ -86,3 +86,15 @@ body {
 		rotate: -10deg;
 	}
 }
+
+.appearFromBottom {
+	animation: appearFromBottom ease-in both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 50%;
+	transform: translateY(50px) scale(.8);	
+}
+@keyframes appearFromBottom {
+	to {
+		transform: translateY(0) scale(1);	
+	}
+}
