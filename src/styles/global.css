@@ -90,7 +90,7 @@ body {
 .appearFromBottom {
 	animation: appearFromBottom ease-in both;
 	animation-timeline: view();
-	animation-range: entry 0% cover 90%;
+	animation-range: entry 10% cover 90%;
 	transform: translateY(50px) scale(.8);	
 }
 @keyframes appearFromBottom {
