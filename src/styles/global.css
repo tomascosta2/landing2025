@@ -46,7 +46,7 @@ body {
 .--move-down {
 	animation: moveDown ease-in both;
 	animation-timeline: view();
-	animation-range: entry 10% cover 200%;
+	animation-range: entry 20% cover 70%;
 }
 @keyframes moveDown {
 	from {
@@ -54,7 +54,7 @@ body {
 	}
 
 	to {
-		transform: translateY(100px);
+		transform: translateY(40px);
 	}
 }
 
