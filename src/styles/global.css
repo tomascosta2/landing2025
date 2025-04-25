@@ -64,7 +64,7 @@ body {
 	animation-range: entry 10% cover 180%;
 }
 .--move-up.--2 {
-	animation-range: entry 10% cover 200%;
+	animation-range: entry 10% cover 300%;
 }
 @keyframes moveUp {
 	from {
