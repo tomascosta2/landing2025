@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+.tcp-container {
+	@apply max-w-[1040px] mx-auto px-4;
+}
+
+.textPurple {
+	@apply text-[#4F39F6];
+}
+
+.bgPurple {
+	@apply bg-[#4F39F6];
+}
+
+body {
+	font-family: 'Inter Variable', sans-serif;
+}
+
+.--playfair {
+	font-family: 'Playfair Display Variable', serif;
+}
+
+.tcp-btn {
+	@apply bg-[#FF6900] relative p-6 font-bold block md:w-fit mt-12 rounded-full text-center text-white;
+}
+
+/* Particulas */
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+
+	border-bottom: 18px solid #B100C0;
+}
+
+.triangle.--yellow {
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+
+	border-bottom: 18px solid #FFB200;
+}
+
+.--move-down {
+	animation: moveDown ease-in both;
+	animation-timeline: view();
+	animation-range: entry 10% cover 200%;
+}
+@keyframes moveDown {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(100px);
+	}
+}
+
+.--move-up {
+	animation: moveUp ease-in both;
+	animation-timeline: view();
+	animation-range: entry 10% cover 180%;
+}
+@keyframes moveUp {
+	from {
+		transform: translateY(0);
+	}
+
+	to {
+		transform: translateY(-100px);
+	}
+}
+
+.--move-rotate {
+	animation: moveRotate ease-in both;
+	animation-timeline: view();
+	animation-range: entry 10% cover 100%;
+}
+@keyframes moveRotate {
+	to {
+		transform: rotate(-10deg);
+	}
+}
