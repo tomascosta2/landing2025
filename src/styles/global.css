@@ -21,7 +21,7 @@ body {
 }
 
 .tcp-btn {
-	@apply bg-[#FF6900] relative p-6 font-bold block md:w-fit mt-12 rounded-full text-center text-white;
+	@apply bg-[#FF6900] relative px-6 py-4 font-bold block md:w-fit mt-12 rounded-full text-center text-white text-[18px];
 }
 
 /* Particulas */
