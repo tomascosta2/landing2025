@@ -48,6 +48,7 @@ body {
 	animation-timeline: view();
 	animation-range: entry 20% cover 70%;
 }
+
 @keyframes moveDown {
 	from {
 		transform: translateY(0);
@@ -63,9 +64,11 @@ body {
 	animation-timeline: view();
 	animation-range: entry 10% cover 180%;
 }
+
 .--move-up.--2 {
 	animation-range: entry 10% cover 300%;
 }
+
 @keyframes moveUp {
 	from {
 		transform: translateY(0);
@@ -81,6 +84,7 @@ body {
 	animation-timeline: view();
 	animation-range: entry 10% cover 100%;
 }
+
 @keyframes moveRotate {
 	to {
 		rotate: -10deg;
@@ -91,11 +95,12 @@ body {
 	animation: appearFromBottom ease-in both;
 	animation-timeline: view();
 	animation-range: entry 10% cover 60%;
-	transform: translateY(20px) scale(.8);	
+	transform: translateY(20px) scale(.8);
 }
+
 @keyframes appearFromBottom {
 	to {
-		transform: translateY(0) scale(1);	
+		transform: translateY(0) scale(1);
 	}
 }
 
@@ -103,31 +108,55 @@ body {
 	animation: saludo 2s ease-in-out infinite;
 	animation-delay: 1s;
 }
+
 @keyframes saludo {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(20deg);
-  }
-  40% {
-    transform: rotate(-15deg);
-  }
-  60% {
-    transform: rotate(10deg);
-  }
-  80% {
-    transform: rotate(-5deg);
-  }
+
+	0%,
+	100% {
+		transform: rotate(0deg);
+	}
+
+	20% {
+		transform: rotate(20deg);
+	}
+
+	40% {
+		transform: rotate(-15deg);
+	}
+
+	60% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-5deg);
+	}
 }
+
+.--temblor {
+	display: inline-block;
+	animation: temblorCadaTanto 5s steps(1, end) infinite;
+  }
+  
+  @keyframes temblorCadaTanto {
+	0% { transform: translateX(0); }
+	1% { transform: translateX(-2px); }
+	2% { transform: translateX(2px); }
+	3% { transform: translateX(-1px); }
+	4% { transform: translateX(1px); }
+	5% { transform: translateX(0); }
+	100% { transform: translateX(0); } /* quieto el resto del tiempo */
+  }
 
 /* Carrusel testimonios */
 @media (max-width: 500px) {
+
 	.swiper-slide-next,
 	.swiper-slide-prev {
 		scale: 95%;
 		transition: all .5s;
 	}
+
 	.swiper-slide {
 		transition: all .5s !important;
 	}
