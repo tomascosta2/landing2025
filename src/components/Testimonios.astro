@@ -1,0 +1,53 @@
+<section class="py-[100px] bg-[#111] rounded-[80px] overflow-clip">
+	<div class="tcp-container">
+		<h2
+			class="mb-8 font-bold text-[32px] text-white text-center leading-[110%]"
+		>
+			Pero... No son solo
+			<br />
+			<span class="italic text-red-600 --playfair">Páginas Web</span>
+		</h2>
+		<div class="swiper mySwiper mt-8" style="overflow: visible !important;">
+			<div class="swiper-wrapper">
+				<div
+					class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[300px]"
+				>
+				</div>
+				<div
+					class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[300px]"
+				>
+				</div>
+				<div
+					class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8 min-h-[300px]"
+				>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	// Core de Swiper y estilos
+	import Swiper from "swiper";
+	import "swiper/css";
+	// Módulo Navigation de Swiper y estilos
+	import { Navigation } from "swiper/modules";
+	import "swiper/css/navigation";
+
+	// Configurar Swiper
+	new Swiper(".swiper", {
+		modules: [Navigation],
+		slidesPerView: 2.8,
+		spaceBetween: 8,
+		initialSlide: 1,
+		centeredSlides: true,
+		breakpoints: {
+			0: {
+				slidesPerView: 1.1,
+			},
+			568: {
+				slidesPerView: 2.8,
+			},
+		},
+	});
+</script>

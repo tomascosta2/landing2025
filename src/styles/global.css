@@ -120,3 +120,15 @@ body {
     transform: rotate(-5deg);
   }
 }
+
+/* Carrusel testimonios */
+@media (max-width: 500px) {
+	.swiper-slide-next,
+	.swiper-slide-prev {
+		scale: 95%;
+		transition: all .5s;
+	}
+	.swiper-slide {
+		transition: all .5s !important;
+	}
+}
