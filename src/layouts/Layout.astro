@@ -20,11 +20,44 @@ import '@fontsource-variable/inter';
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+
+<script>
+	// Core de Swiper y estilos
+	import Swiper from "swiper";
+	import "swiper/css";
+	// Módulo Navigation de Swiper y estilos
+	import { Navigation } from "swiper/modules";
+	import "swiper/css/navigation";
+
+	// Configurar Swiper
+	new Swiper(".swiperTestimonios", {
+		modules: [Navigation],
+		slidesPerView: 2.8,
+		spaceBetween: 8,
+		initialSlide: 1,
+		centeredSlides: true,
+		breakpoints: {
+			0: {
+				slidesPerView: 1.1,
+			},
+			568: {
+				slidesPerView: 2.8,
+			},
+		},
+	});
+	// Configurar Swiper
+	new Swiper(".swiperPlans", {
+		slidesPerView: 2.8,
+		spaceBetween: 4,
+		initialSlide: 1,
+		centeredSlides: true,
+		breakpoints: {
+			0: {
+				slidesPerView: 1.05,
+			},
+			568: {
+				slidesPerView: 2.8,
+			},
+		},
+	});
+</script>

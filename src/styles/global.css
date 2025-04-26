@@ -21,7 +21,10 @@ body {
 }
 
 .tcp-btn {
-	@apply bg-[#FF6900] relative px-6 py-4 font-bold block md:w-fit mt-12 rounded-full text-center text-white text-[18px];
+	@apply bg-[#FF6900] relative px-6 py-4 font-bold block md:w-fit rounded-full text-center text-white text-[18px];
+}
+.tcp-btn.--no-span {
+	@apply py-6 text-[16px];
 }
 
 /* Particulas */
@@ -97,6 +100,7 @@ body {
 	animation-range: entry 10% cover 60%;
 	transform: translateY(20px) scale(.8);
 }
+
 @keyframes appearFromBottom {
 	to {
 		transform: translateY(0) scale(1);
@@ -110,6 +114,7 @@ body {
 	transform: translateY(40px) scale(.8);
 	opacity: 0;
 }
+
 @keyframes fadeUp {
 	to {
 		transform: translateY(0) scale(1);
@@ -148,21 +153,41 @@ body {
 
 .--temblor {
 	display: inline-block;
-	transition: all 1s;
-	animation: temblorCadaTanto 5s steps(1, end) infinite;
+	animation: temblorSuave 5s ease-in-out infinite;
 }
 
-@keyframes temblorCadaTanto {
-	0% { transform: translateX(0); }
-	1% { transform: translateX(-5px); }
-	2% { transform: translateX(5px); }
-	3% { transform: translateX(-3px); }
-	4% { transform: translateX(3px); }
-	5% { transform: translateX(-1px); }
-	6% { transform: translateX(1px); }
-	7% { transform: translateX(0); }
-	100% { transform: translateX(0); } /* quieto el resto del tiempo */
+@keyframes temblorSuave {
+	0% {
+		transform: translateX(0);
+	}
+
+	2% {
+		transform: translateX(-2px);
+	}
+
+	4% {
+		transform: translateX(2px);
+	}
+
+	6% {
+		transform: translateX(-1px);
+	}
+
+	8% {
+		transform: translateX(1px);
+	}
+
+	10% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+
+	/* quieto hasta que vuelva a empezar */
 }
+
 
 .--slide-r {
 	animation: slideR ease-in-out;
@@ -170,6 +195,7 @@ body {
 	animation-range: entry 10% cover 150%;
 	transform: translateX(-200px);
 }
+
 @keyframes slideR {
 	to {
 		transform: translateX(0);
@@ -182,6 +208,7 @@ body {
 	animation-range: entry 10% cover 150%;
 	transform: translateX(0);
 }
+
 @keyframes slideL {
 	to {
 		transform: translateX(-200px);
@@ -200,4 +227,15 @@ body {
 	.swiper-slide {
 		transition: all .5s !important;
 	}
+}
+
+.border-b.border-dashed {
+	border-bottom-width: 1px;
+	border-style: solid; /* cambiamos a solid para que border-image funcione bien */
+	border-color: transparent;
+	border-image: repeating-linear-gradient(
+	  to right,
+	  #1e1e1eaa 0 1px,       /* tramo negro largo (4px) */
+	  transparent 1px 2.5px /* espacio corto (10px) */
+	) 100 stretch;
 }
