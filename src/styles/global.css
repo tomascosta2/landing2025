@@ -148,16 +148,19 @@ body {
 
 .--temblor {
 	display: inline-block;
+	transition: all 1s;
 	animation: temblorCadaTanto 5s steps(1, end) infinite;
 }
 
 @keyframes temblorCadaTanto {
 	0% { transform: translateX(0); }
-	1% { transform: translateX(-2px); }
-	2% { transform: translateX(2px); }
-	3% { transform: translateX(-1px); }
-	4% { transform: translateX(1px); }
-	5% { transform: translateX(0); }
+	1% { transform: translateX(-5px); }
+	2% { transform: translateX(5px); }
+	3% { transform: translateX(-3px); }
+	4% { transform: translateX(3px); }
+	5% { transform: translateX(-1px); }
+	6% { transform: translateX(1px); }
+	7% { transform: translateX(0); }
 	100% { transform: translateX(0); } /* quieto el resto del tiempo */
 }
 
