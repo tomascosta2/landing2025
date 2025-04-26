@@ -162,7 +162,7 @@ body {
 }
 
 .--slide-r {
-	animation: slideR 2s ease-in-out;
+	animation: slideR ease-in-out;
 	animation-timeline: view();
 	animation-range: entry 10% cover 100%;
 	transform: translateX(-900px);
@@ -174,7 +174,7 @@ body {
 }
 
 .--slide-l {
-	animation: slideL 2s ease-in-out;
+	animation: slideL ease-in-out;
 	animation-timeline: view();
 	animation-range: entry 10% cover 100%;
 	transform: translateX(0);
