@@ -149,9 +149,9 @@ body {
 .--temblor {
 	display: inline-block;
 	animation: temblorCadaTanto 5s steps(1, end) infinite;
-  }
-  
-  @keyframes temblorCadaTanto {
+}
+
+@keyframes temblorCadaTanto {
 	0% { transform: translateX(0); }
 	1% { transform: translateX(-2px); }
 	2% { transform: translateX(2px); }
@@ -159,6 +159,30 @@ body {
 	4% { transform: translateX(1px); }
 	5% { transform: translateX(0); }
 	100% { transform: translateX(0); } /* quieto el resto del tiempo */
+}
+
+.--slide-r {
+	animation: slideR 2s ease-in-out;
+	animation-timeline: view();
+	animation-range: entry 10% cover 100%;
+	transform: translateX(-900px);
+}
+@keyframes slideR {
+	to {
+		transform: translateX(0);
+	}
+}
+
+.--slide-l {
+	animation: slideL 2s ease-in-out;
+	animation-timeline: view();
+	animation-range: entry 10% cover 100%;
+	transform: translateX(0);
+}
+@keyframes slideL {
+	to {
+		transform: translateX(-900px);
+	}
 }
 
 /* Carrusel testimonios */
