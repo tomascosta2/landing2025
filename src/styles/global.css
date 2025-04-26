@@ -229,8 +229,8 @@ body {
 	}
 }
 
+.border-t.border-dashed,
 .border-b.border-dashed {
-	border-bottom-width: 1px;
 	border-style: solid; /* cambiamos a solid para que border-image funcione bien */
 	border-color: transparent;
 	border-image: repeating-linear-gradient(
@@ -238,4 +238,10 @@ body {
 	  #1e1e1eaa 0 1px,       /* tramo negro largo (4px) */
 	  transparent 1px 2.5px /* espacio corto (10px) */
 	) 100 stretch;
+}
+.border-b.border-dashed {
+	border-bottom-width: 1px;
+}
+.border-t.border-dashed {
+	border-top-width: 1px;
 }
