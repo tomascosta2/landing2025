@@ -165,7 +165,7 @@ body {
 	animation: slideR ease-in-out;
 	animation-timeline: view();
 	animation-range: entry 10% cover 100%;
-	transform: translateX(-500px);
+	transform: translateX(-300px);
 }
 @keyframes slideR {
 	to {
@@ -181,7 +181,7 @@ body {
 }
 @keyframes slideL {
 	to {
-		transform: translateX(-500px);
+		transform: translateX(-300px);
 	}
 }
 
