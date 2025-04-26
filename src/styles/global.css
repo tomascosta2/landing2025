@@ -108,7 +108,7 @@ body {
 	animation-timeline: view();
 	animation-range: entry 10% cover 40%;
 	transform: translateY(40px) scale(.8);
-	opacity: 50%;
+	opacity: 0;
 }
 @keyframes fadeUp {
 	to {
