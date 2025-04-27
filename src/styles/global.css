@@ -21,7 +21,7 @@ body {
 }
 
 .tcp-btn {
-	@apply bg-[#FF6900] relative px-6 py-4 font-bold block md:w-fit rounded-full text-center text-white text-[18px];
+	@apply bg-[#FF6900] px-6 py-4 font-bold block md:w-fit rounded-full text-center text-white text-[18px] sticky bottom-4 z-50;
 }
 .tcp-btn.--no-span {
 	@apply py-6 text-[16px];
