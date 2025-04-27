@@ -27,6 +27,10 @@ body {
 	@apply py-6 text-[16px];
 }
 
+h1, h2, h3 {
+	letter-spacing: -0.5px;
+}
+
 /* Particulas */
 .triangle {
 	width: 0;
