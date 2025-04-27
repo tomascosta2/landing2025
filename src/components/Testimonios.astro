@@ -1,3 +1,38 @@
+---
+const TESTIMONIOS = [
+  {
+    nombre: 'Alexis Mois',
+    cargo: 'Agencia de Marketing',
+    texto: 'La dedicación, el orden y el cuidado por los detalles hacen que trabajo de Tomás sea una excelente opción para trabajar con nuestra agencia. Realmente un placer.',
+    img: 'tomas-costa-testimonio-1.webp',
+  },
+  {
+    nombre: 'Matias Sanchez',
+    cargo: 'Coach Fitness',
+    texto: 'El salto de calidad que tuve en el diseño y calidad de mi Landing Page con Tomi fue increíble.',
+    img: 'tomas-costa-testimonio-2.webp',
+  },
+  {
+    nombre: 'Vicente Calderon',
+    cargo: 'Agencia para consultores',
+    texto: 'Un gustazo trabajar con Tomas, la gran combinación de calidad y rapidez, en 7 días logró crear exactamente la idea que tenía en mi mente de mi página web. Destacando que estuvo 100% a disposición para perfeccionar cada detalle que un “cliente exigente” como yo le podía pedir, un excelente servicio 👌',
+    img: 'tomas-costa-testimonio-3.webp',
+  },
+  {
+    nombre: 'Agustin Oroquieta',
+    cargo: 'Agencia de Marketing',
+    texto: 'Queríamos mejorar el diseño de nuestra web y en diez días ya la teníamos funcionando. Además instaló Google Analytics y quedó súper disponible para todo lo que necesitábamos.',
+    img: 'tomas-costa-testimonio-4.webp',
+  },
+  {
+    nombre: 'Lucas Reale',
+    cargo: 'Coach Fitness',
+    texto: 'Mi experiencia con tu servicio fue 10/10. Sinceramente desde el primer día que comenzamos a trabajar vi mucho profesionalismo, compromiso y dedicación. Constantemente me ibas contando, preguntando, mostrando, etc. Eso me hacía tener mucha claridad. Muchas gracias por la buena onda y la atención 🙌🏼',
+    img: 'tomas-costa-testimonio-5.webp',
+  },
+];
+
+---
 <section class="py-[90px] bg-[#111] rounded-[60px] overflow-clip">
 	<div class="tcp-container">
 		<h2
@@ -9,32 +44,28 @@
 		</h2>
 		<div class="swiper swiperTestimonios mt-8" style="overflow: visible !important;">
 			<div class="swiper-wrapper">
-				<div
-					class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8"
-				>
-					<div class="flex flex-col justify-between w-full min-h-[250px]">
-						<p class="text-white/80">Texto</p>
-						<img class="size-[60px] rounded-full bg-gray-300" src="/images/testimonio-1" alt="Tomas Costa Testimonio">
+			  {TESTIMONIOS.map((testimonio) => (
+				<div class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8">
+				  <div class="flex flex-col justify-between w-full min-h-[350px]">
+					<p class="text-white/80">
+					  {testimonio.texto}
+					</p>
+					<div class="flex items-center gap-4 mt-6">
+					  <img
+						class="size-[60px] rounded-full bg-gray-300"
+						src={`/images/${testimonio.img}.webp`}
+						alt={`Testimonio de ${testimonio.nombre}`}
+					  />
+					  <div class="text-white/80 text-sm">
+						<p class="font-bold">{testimonio.nombre}</p>
+						<p>{testimonio.cargo}</p>
+					  </div>
 					</div>
+				  </div>
 				</div>
-				<div
-					class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8"
-				>
-					<div class="flex flex-col justify-between w-full min-h-[250px]">
-						<p class="text-white/80">Texto</p>
-						<img class="size-[60px] rounded-full bg-gray-300" src="/images/testimonio-1" alt="Tomas Costa Testimonio">
-					</div>
-				</div>
-				<div
-					class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8"
-				>
-					<div class="flex flex-col justify-between w-full min-h-[250px]">
-						<p class="text-white/80">Texto</p>
-						<img class="size-[60px] rounded-full bg-gray-300" src="/images/testimonio-1" alt="Tomas Costa Testimonio">
-					</div>
-				</div>
+			  ))}
 			</div>
-		</div>
+		  </div>
 		<a class="tcp-btn mt-12" href="#planes">
 			Ver Cotizaciones »
 			<br>
