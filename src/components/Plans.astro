@@ -40,7 +40,7 @@ const PLANES = [
     ],
   },
   {
-    icono: '/images/tomas-costa-landing-informatica.svg',
+    icono: '/images/tomas-costa-landing-informativa.svg',
     nombre: "Informativa",
     descripcion: "Explicá quién sos, qué hacés y por qué elegirte transmitiendo autoridad.",
     precioDolar: "550",
@@ -98,17 +98,17 @@ const PLANES = [
 						return (
 							<div class="testimonio-card swiper-slide bg-white rounded-xl border border-[#111]/20 px-4 py-8">
 								<img
-									class="w-[80px] h-[55px] object-contain bg-gray-300 mx-auto"
-									src="/images/vsl-icon.webp"
+									class="w-[60px] h-[55px] object-contain mx-auto"
+									src={plan.icono}
 									alt="Landing Page VSL Tomas Costa"
 								/>
-								<h2 class="text-[32px] text-[#1E1E1E] font-extrabold text-center mt-4">
+								<h2 class="text-[32px] text-[#1E1E1E] font-extrabold text-center my-4 leading-[110%]">
 									Landing 
 									<span class="italic --playfair">
 										{plan.nombre}
 									</span>
 								</h2>
-								<p class="text-center text-[#1E1E1E]/80 px-4">
+								<p class="text-center text-[#1E1E1E]/80 px-4 leading-[120%]">
 									{plan.descripcion}
 								</p>
 								<div class="bg-white border mt-8 border-[#111]/20 p-4 rounded-lg">
