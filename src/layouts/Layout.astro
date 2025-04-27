@@ -27,7 +27,9 @@ import '@fontsource-variable/inter';
 	import "swiper/css";
 	// Módulo Navigation de Swiper y estilos
 	import { Navigation } from "swiper/modules";
-	import "swiper/css/navigation";
+	import { Pagination } from 'swiper/modules';
+
+	import "swiper/css/pagination";
 
 	// Configurar Swiper
 	new Swiper(".swiperTestimonios", {
@@ -47,6 +49,7 @@ import '@fontsource-variable/inter';
 	});
 	// Configurar Swiper
 	new Swiper(".swiperPlans", {
+		modules: [Pagination],
 		slidesPerView: 2.8,
 		spaceBetween: 4,
 		initialSlide: 1,
@@ -58,6 +61,9 @@ import '@fontsource-variable/inter';
 			568: {
 				slidesPerView: 2.8,
 			},
+		},
+		pagination: {
+			el: ".testimonios-pagination",
 		},
 	});
 </script>

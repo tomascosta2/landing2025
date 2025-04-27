@@ -83,15 +83,16 @@ const PLANES = [
 
 <section class="py-[80px] overflow-clip">
 	<div class="tcp-container">
-		<h2 class="text-[32px] font-extrabold leading-[110%] textPurple">
+		<h2 class="text-[32px] font-extrabold text-center leading-[110%] textPurple">
 			Encontremos
 			<br />
 			Tu Landing <span class="italic --playfair">Ideal</span>
 		</h2>
 		<div
-			class="swiper swiperPlans mt-8"
+			class="swiper swiperPlans mt-14"
 			style="overflow: visible !important;"
 		>
+			<div class="swiper-pagination testimonios-pagination"></div>
 			<div class="swiper-wrapper">
 				{
 					PLANES.map((plan) => {

@@ -249,3 +249,14 @@ h1, h2, h3 {
 .border-t.border-dashed {
 	border-top-width: 1px;
 }
+
+.testimonios-pagination {
+	bottom: unset !important;
+	top: -40px !important;
+}
+.swiper-pagination-bullet {
+	border: 1px solid #4F39F6 !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: #4F39F6 !important;
+}
