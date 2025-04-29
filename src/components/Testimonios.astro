@@ -1,16 +1,16 @@
 ---
 const TESTIMONIOS = [
   {
-    nombre: 'Alexis Mois',
-    cargo: 'Agencia de Marketing',
-    texto: 'La dedicación, el orden y el cuidado por los detalles hacen que trabajo de Tomás sea una excelente opción para trabajar con nuestra agencia. Realmente un placer.',
-    img: 'tomas-costa-testimonio-1.jpg',
-  },
-  {
     nombre: 'Matias Sanchez',
     cargo: 'Coach Fitness',
     texto: 'El salto de calidad que tuve en el diseño y calidad de mi Landing Page con Tomi fue increíble.',
     img: 'tomas-costa-testimonio-2.jpg',
+  },
+  {
+    nombre: 'Alexis Mois',
+    cargo: 'Agencia de Marketing',
+    texto: 'La dedicación, el orden y el cuidado por los detalles hacen que trabajo de Tomás sea una excelente opción para trabajar con nuestra agencia. Realmente un placer.',
+    img: 'tomas-costa-testimonio-1.jpg',
   },
   {
     nombre: 'Vicente Calderon',
@@ -48,7 +48,7 @@ const TESTIMONIOS = [
 				<div class="testimonio-card swiper-slide bg-[#2F2F2F] rounded-xl border border-white/20 p-8">
 				  <div class="flex flex-col justify-between w-full min-h-[350px]">
 					<p class="text-white/80">
-					  {testimonio.texto}
+					  "{testimonio.texto}"
 					</p>
 					<div class="flex items-center gap-4 mt-6">
 					  <img
