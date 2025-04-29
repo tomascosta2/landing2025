@@ -5,7 +5,7 @@ const PLANES = [
     nombre: "Opt-In",
     descripcion: "Pensada para coaches y profesionales online que quieren más contactos calificados, sin vueltas.",
     precioDolar: "550",
-    precioPesos: "XXX",
+    precioPesos: 550*1200,
     mensajeWpp: "Hola, me interesa la Landing Opt-In",
     incluye: [
       "Un año de dominio pagado y su configuración",
@@ -25,7 +25,7 @@ const PLANES = [
     nombre: "VSL",
     descripcion: "Ideal para vender servicios con un video que convence y convierte.",
     precioDolar: "450",
-    precioPesos: "XXX",
+    precioPesos: 450*1200,
     mensajeWpp: "Hola, me interesa la Landing VSL",
     incluye: [
       "Un año de dominio pagado y su configuración",
@@ -44,7 +44,7 @@ const PLANES = [
     nombre: "Informativa",
     descripcion: "Explicá quién sos, qué hacés y por qué elegirte transmitiendo autoridad.",
     precioDolar: "550",
-    precioPesos: "XXX",
+    precioPesos: 550*1200,
     mensajeWpp: "Hola, me interesa la Landing Informativa",
     incluye: [
       "Un año de dominio pagado y su configuración",
@@ -63,7 +63,7 @@ const PLANES = [
     nombre: "Venta Directa",
     descripcion: "Ideal para productos Low-Ticket y Mid-Ticket como cursos o materiales pago.",
     precioDolar: "650",
-    precioPesos: "XXX",
+    precioPesos: 650*1200,
     mensajeWpp: "Hola, me interesa la Landing Venta Directa",
     incluye: [
       "Un año de dominio pagado y su configuración",
@@ -86,7 +86,7 @@ const PLANES = [
 		<h2 class="text-[32px] font-extrabold text-center leading-[110%] textPurple">
 			Encontremos
 			<br />
-			Tu Landing <span class="italic --playfair">Ideal</span>
+			Tu Landing <span class="italic">Ideal</span>
 		</h2>
 		<div
 			class="swiper swiperPlans mt-14"
@@ -123,7 +123,7 @@ const PLANES = [
 											/>
 										</p>
 										<p class="text-[34px] font-extrabold mt-2 text-center text-[#1e1e1e]/80">
-											${plan.precioPesos}
+											${plan.precioPesos.toLocaleString('es-AR')}
 										</p>
 									</div>
 									<div class="pt-6">
@@ -136,7 +136,7 @@ const PLANES = [
 											/>
 										</p>
 										<p class="text-[34px] font-extrabold mt-2 text-center text-[#1e1e1e]/80">
-											${plan.precioDolar}
+											USD${plan.precioDolar}
 										</p>
 									</div>
 								</div>
