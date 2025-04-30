@@ -96,7 +96,7 @@ section {
 .tcp-btn.animate {
 	pointer-events: none;
 	animation: btnAnimation ease-in-out both;
-	animation-delay: 1s;
+	animation-delay: .95s;
 }
 
 @keyframes btnAnimation {
