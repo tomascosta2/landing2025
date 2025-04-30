@@ -121,6 +121,7 @@ const PLANES = [
 								<p class="text-center text-[#1E1E1E]/80 px-4 leading-[120%]">
 									{plan.descripcion}
 								</p>
+								{path.includes('/b') && (
 								<div class="bg-white border mt-8 border-[#111]/20 p-4 rounded-lg">
 									<div class="pb-4 border-b border-dashed border-[#111]/20">
 										<p class="flex items-center justify-center gap-2 text-[14px] font-semibold text-[#1E1E1E]/80">
@@ -149,6 +150,7 @@ const PLANES = [
 										</p>
 									</div>
 								</div>
+								)}
 								<div class="mt-8 px-4">
 									<ul>
 										{
@@ -168,24 +170,13 @@ const PLANES = [
 										})}
 									</ul>
 								</div>
-								{path === '/' && (
-									<a
-										class="tcp-btn --no-span mt-8"
-										target="_blank"
-										href="https://calendly.com/tomascostapp/30min"
-									>
-										Consultar Disponibilidad »
-									</a>
-								)}
-								{path.includes('/b') && (
-									<a
-										class="tcp-btn --no-span mt-8"
-										target="_blank"
-										href={`https://wa.me/542616841853?text=${encodeURIComponent(plan.mensajeWpp)}`}
-									>
-										Consultar Disponibilidad »
-									</a>
-								)}
+								<a
+									class="tcp-btn --no-span mt-8"
+									target="_blank"
+									href="https://calendly.com/tomascostapp/30min"
+								>
+									Consultar Disponibilidad »
+								</a>
 							</div>
 						);
 					})
