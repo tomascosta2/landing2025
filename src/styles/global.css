@@ -38,12 +38,11 @@ body {
 	border-radius: 200px;
 	animation: btnBeforeAnimation ease-in-out both;
 	animation-timeline: view();
-	animation-range: entry 20% cover 40%;
+	animation-range: entry 30% cover 50%;
 }
 @keyframes btnBeforeAnimation {
 	0% {
-		max-width: 45px;
-		max-height: 45px;
+		transform: scale(1) translateY(0);
 		border: 0 solid white;
 	}
 	10% {
@@ -57,12 +56,12 @@ body {
 	50% {
 	}
 	70% {
-		max-width: 45px;
-		max-height: 45px;
+		height: 45px;
+		width: 45px;
 	}
 	99% {
-		max-width: 100%;
-		max-height: 100%;
+		width: 100%;
+		height: 100%;
 		width: 100%;
 		height: 100%;
 		opacity: 100%;
