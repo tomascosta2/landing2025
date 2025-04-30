@@ -21,13 +21,13 @@ body {
 }
 
 .tcp-btn {
-	@apply bg-[#FF6900] flex flex-col gap-0 h-min items-center justify-center px-6 py-4 font-bold md:w-fit rounded-full text-center text-white text-[18px] sticky bottom-6 z-50;
-
+	@apply bg-[#FF6900] flex flex-col gap-0 h-min items-center justify-center px-6 py-4 font-bold md:w-fit rounded-full text-center text-white text-[18px] absolute bottom-6 z-50;
+/* 
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
 	position: -o-sticky;
-	position: sticky;
+	position: sticky; */
 }
 .tcp-btn.--no-span {
 	@apply py-6 text-[16px];
