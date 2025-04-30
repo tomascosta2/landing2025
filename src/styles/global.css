@@ -40,6 +40,7 @@ section {
 /* Animacion contenedor del boton */
 .tcp-btn::before {
 	content: '';
+	display: block;
 	position: absolute;
 	height: 45px;
 	width: 45px;
