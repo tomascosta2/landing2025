@@ -89,7 +89,10 @@ section {
 	}
 }
 
-
+.tcp-btn.to-animate {
+	background-color: transparent;
+	color: transparent;
+}
 .tcp-btn.animate {
 	pointer-events: none;
 	animation: btnAnimation ease-in-out both;
@@ -110,6 +113,8 @@ section {
 	}
 
 	100% {
+		background-color: #FF6900;
+		color: white;
 		opacity: 100;
 		pointer-events: auto;
 	}
