@@ -39,7 +39,7 @@ section {
 }
 
 /* Animacion contenedor del boton */
-/* .tcp-btn.animate::before {
+.tcp-btn.animate::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -50,9 +50,7 @@ section {
 	z-index: 90;
 	background-color: #FF6900;
 	border-radius: 200px;
-	animation: btnBeforeAnimation ease-in-out both;
-	animation-timeline: view();
-	animation-range: entry-crossing 10% cover 30%;
+	animation: btnBeforeAnimation 1s ease-in-out both;
 }
 
 @keyframes btnBeforeAnimation {
@@ -89,17 +87,16 @@ section {
 	100% {
 		opacity: 0;
 	}
-} */
+}
 
 
-/* .tcp-btn {
+.tcp-btn.animate {
 	pointer-events: none;
 	animation: btnAnimation ease-in-out both;
-	animation-timeline: view();
-	animation-range: entry 30% cover 30%;
-} */
+	animation-delay: 1s;
+}
 
-/* @keyframes btnAnimation {
+@keyframes btnAnimation {
 	0% {
 		background-color: transparent;
 		color: transparent;
@@ -116,7 +113,7 @@ section {
 		opacity: 100;
 		pointer-events: auto;
 	}
-} */
+}
 
 
 
