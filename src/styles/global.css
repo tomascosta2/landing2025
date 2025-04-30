@@ -50,7 +50,7 @@ section {
 	z-index: 90;
 	background-color: #FF6900;
 	border-radius: 200px;
-	animation: btnBeforeAnimation 1s ease-in-out both;
+	animation: btnBeforeAnimation 1.2s ease-in-out both;
 }
 
 @keyframes btnBeforeAnimation {
@@ -96,7 +96,7 @@ section {
 .tcp-btn.animate {
 	pointer-events: none;
 	animation: btnAnimation ease-in-out both;
-	animation-delay: .95s;
+	animation-delay: 1.195s;
 }
 
 @keyframes btnAnimation {
