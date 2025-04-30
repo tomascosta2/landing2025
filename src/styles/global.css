@@ -51,7 +51,7 @@ section {
 	border-radius: 200px;
 	animation: btnBeforeAnimation ease-in-out both;
 	animation-timeline: view();
-	animation-range: entry 10% cover 30%;
+	animation-range: entry-crossing 10% cover 30%;
 }
 @keyframes btnBeforeAnimation {
 	0% {
