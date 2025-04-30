@@ -90,11 +90,11 @@ const TESTIMONIOS = [
 	const observer = new IntersectionObserver(
 	  ([entry]) => {
 		if (entry.isIntersecting) {
-		  btn.classList.toggle('animate');
+		  btn.classList.add('animate');
 		  console.log("enr")
 		}
 	  },
-	  { threshold: .1 }
+	  { threshold: .2 }
 	);
   
 	observer.observe(trigger);
