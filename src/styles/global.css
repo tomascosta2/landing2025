@@ -22,13 +22,14 @@ body {
 
 .tcp-btn {
 	@apply bg-[#FF6900] flex flex-col gap-0 h-min items-center justify-center px-6 py-4 font-bold md:w-fit rounded-full text-center text-white text-[18px] sticky bottom-6 z-50;
-/* 
+	/* 
 	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
 	position: -o-sticky;
 	position: sticky; */
 }
+
 .tcp-btn.--no-span {
 	@apply py-6 text-[16px];
 }
@@ -38,7 +39,7 @@ section {
 }
 
 /* Animacion contenedor del boton */
-.tcp-btn::before {
+.tcp-btn.animate::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -53,11 +54,13 @@ section {
 	animation-timeline: view();
 	animation-range: entry-crossing 10% cover 30%;
 }
+
 @keyframes btnBeforeAnimation {
 	0% {
 		transform: scale(1) translateY(20px);
 		border: 0 solid white;
 	}
+
 	10% {
 		transform: translateY(50px);
 		border: 0 solid white;
@@ -65,20 +68,24 @@ section {
 		max-height: 65px;
 		max-width: 65px;
 	}
+
 	20% {
 		transform: translateY(-20px);
 	}
-	50% {
-	}
+
+	50% {}
+
 	70% {
 		max-height: 45px;
 		max-width: 45px;
 	}
+
 	99% {
 		max-width: 100%;
 		max-height: 100%;
 		opacity: 100%;
 	}
+
 	100% {
 		opacity: 0;
 	}
@@ -91,17 +98,20 @@ section {
 	animation-timeline: view();
 	animation-range: entry 10% cover 30%;
 }
+
 @keyframes btnAnimation {
 	0% {
 		background-color: transparent;
 		color: transparent;
 		pointer-events: none;
 	}
+
 	99% {
 		background-color: transparent;
 		color: transparent;
 		pointer-events: none;
 	}
+
 	100% {
 		opacity: 100;
 		pointer-events: auto;
@@ -110,7 +120,9 @@ section {
 
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	letter-spacing: -0.5px;
 }
 
@@ -318,17 +330,21 @@ h1, h2, h3 {
 
 .border-t.border-dashed,
 .border-b.border-dashed {
-	border-style: solid; /* cambiamos a solid para que border-image funcione bien */
+	border-style: solid;
+	/* cambiamos a solid para que border-image funcione bien */
 	border-color: transparent;
-	border-image: repeating-linear-gradient(
-	  to right,
-	  #1e1e1eaa 0 1px,       /* tramo negro largo (4px) */
-	  transparent 1px 2.5px /* espacio corto (10px) */
-	) 100 stretch;
+	border-image: repeating-linear-gradient(to right,
+			#1e1e1eaa 0 1px,
+			/* tramo negro largo (4px) */
+			transparent 1px 2.5px
+			/* espacio corto (10px) */
+		) 100 stretch;
 }
+
 .border-b.border-dashed {
 	border-bottom-width: 1px;
 }
+
 .border-t.border-dashed {
 	border-top-width: 1px;
 }
@@ -337,9 +353,11 @@ h1, h2, h3 {
 	bottom: unset !important;
 	top: -40px !important;
 }
+
 .swiper-pagination-bullet {
 	border: 1px solid #4F39F6 !important;
 }
+
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
 	background-color: #4F39F6 !important;
 }

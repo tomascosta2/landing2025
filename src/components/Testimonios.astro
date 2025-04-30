@@ -46,6 +46,7 @@ const TESTIMONIOS = [
 			class="swiper swiperTestimonios mt-8"
 			style="overflow: visible !important;"
 		>
+		<div class="trigger --1"></div>
 			<div class="swiper-wrapper">
 				{
 					TESTIMONIOS.map((testimonio) => (
@@ -73,7 +74,7 @@ const TESTIMONIOS = [
 				}
 			</div>
 		</div>
-		<a class="tcp-btn mt-12" href="#planes">
+		<a class="tcp-btn --1 mt-12" href="#planes">
 			<span>Ver Cotizaciones »</span>
 			<span class="--temblor font-medium text-[14px] block mt-1"
 				>*Solo 2 cupos por semana</span
@@ -81,3 +82,20 @@ const TESTIMONIOS = [
 		</a>
 	</div>
 </section>
+
+<script is:inline>
+	const btn = document.querySelector('.tcp-btn.--1');
+	const trigger = document.querySelector('.trigger.--1');
+  
+	const observer = new IntersectionObserver(
+	  ([entry]) => {
+		if (entry.isIntersecting) {
+		  btn.classList.toggle('animate');
+		  console.log("enr")
+		}
+	  },
+	  { threshold: .1 }
+	);
+  
+	observer.observe(trigger);
+</script>
