@@ -39,7 +39,7 @@ section {
 }
 
 /* Animacion contenedor del boton */
-.tcp-btn.animate::before {
+/* .tcp-btn.animate::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -89,17 +89,17 @@ section {
 	100% {
 		opacity: 0;
 	}
-}
+} */
 
 
-.tcp-btn {
+/* .tcp-btn {
 	pointer-events: none;
 	animation: btnAnimation ease-in-out both;
 	animation-timeline: view();
 	animation-range: entry 30% cover 30%;
-}
+} */
 
-@keyframes btnAnimation {
+/* @keyframes btnAnimation {
 	0% {
 		background-color: transparent;
 		color: transparent;
@@ -116,7 +116,7 @@ section {
 		opacity: 100;
 		pointer-events: auto;
 	}
-}
+} */
 
 
 
