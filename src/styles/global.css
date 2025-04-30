@@ -96,7 +96,7 @@ section {
 	pointer-events: none;
 	animation: btnAnimation ease-in-out both;
 	animation-timeline: view();
-	animation-range: entry 10% cover 30%;
+	animation-range: entry 30% cover 30%;
 }
 
 @keyframes btnAnimation {
