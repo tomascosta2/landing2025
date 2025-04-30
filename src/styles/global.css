@@ -27,6 +27,10 @@ body {
 	@apply py-6 text-[16px];
 }
 
+section {
+	position: relative;
+}
+
 /* Animacion contenedor del boton */
 .tcp-btn::before {
 	content: '';
