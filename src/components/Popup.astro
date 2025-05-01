@@ -1,0 +1,105 @@
+<section
+	class="fixed bg-[#111]/40 top-0 left-0 w-full h-full z-50 hidden px-4"
+	id="popup"
+>
+	<div class="h-full flex items-center justify-center" id="popupContent">
+		<div
+			class="bg-[#111] rounded-[20px] px-[32px] py-[64px] md:p-[72px] overflow-clip relative max-w-full"
+		>
+			<div class="md:w-[380px] max-w-full mx-auto relative">
+				<form action="" id="webhookForm">
+					<label
+						for="email"
+						class="text-[#fff] font-medium mb-4 block"
+					>
+						Tu correo electronico
+						<input
+							type="email"
+							name="email"
+							placeholder="hormozi@gmail.com"
+							class="w-full p-[16px] rounded-[6px] bg-[#fff] mt-2 text-[#111]/60 placeholder:text-[14px] font-normal"
+						/>
+					</label>
+					<label for="phone" class="text-[#fff] font-medium block">
+						Tu número de WhatsApp
+						<div class="flex gap-2 mt-2">
+							<select
+								name="countryCode"
+								id="countryCode"
+								class="p-[16px] rounded-[6px] bg-[#fff] text-[#111]/80 font-normal"
+							>
+								<option value="+54">🇦🇷 AR</option>
+								<option value="+56">🇨🇱 CL</option>
+								<option value="+57">🇨🇴 CO</option>
+								<option value="+52">🇲🇽 MX</option>
+							</select>
+							<input
+								type="tel"
+								name="phone"
+								id="phoneInput"
+								placeholder="2616841853"
+								class="w-full p-[16px] rounded-[6px] bg-[#fff] text-[#111]/60 placeholder:text-[14px] font-normal"
+							/>
+						</div>
+					</label><label
+						for="presupuesto"
+						class="text-[#fff] font-medium mt-6 block"
+					>
+						¿Cuánto estarías dispuesto a invertir en que tu Página
+						Web Transmita Autoridad a quienes entran?
+						<div
+							class="mt-2 flex flex-col gap-2 text-[#fff]/90 text-[14px]"
+						>
+							<label class="flex items-center gap-2">
+								<input
+									type="radio"
+									name="presupuesto"
+									value="Menos de usd350"
+									class="accent-[#3B4FFF]"
+									required
+								/>
+								Menos de usd350
+							</label>
+							<label class="flex items-center gap-2">
+								<input
+									type="radio"
+									name="presupuesto"
+									value="entre usd400 y usd700"
+									class="accent-[#3B4FFF]"
+								/>
+								entre usd400 y usd700
+							</label>
+							<label class="flex items-center gap-2">
+								<input
+									type="radio"
+									name="presupuesto"
+									value="más de usd700"
+									class="accent-[#3B4FFF]"
+								/>
+								más de usd700
+							</label>
+						</div>
+					</label>
+					<button type="submit" class="tcp-btn mt-6">
+						Agendar
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.querySelectorAll(".open-popup").forEach((el) => {
+		el.addEventListener("click", () => {
+			document.getElementById("popup")?.classList.toggle("hidden");
+		});
+	});
+
+	document.getElementById("popup")?.addEventListener("click", (e) => {
+		console.log(e.target, " target:", document.getElementById("popup"));
+		if (e.target === document.getElementById("popupContent")) {
+			document.getElementById("popup")?.classList.add("hidden");
+		}
+	});
+</script>

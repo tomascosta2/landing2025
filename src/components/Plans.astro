@@ -1,4 +1,5 @@
 ---
+import Popup from './Popup.astro';
 const path = Astro.url.pathname;
 
 const PLANES = [
@@ -170,13 +171,11 @@ const PLANES = [
 										})}
 									</ul>
 								</div>
-								<a
-									class="tcp-btn --no-span mt-8"
-									target="_blank"
-									href="https://calendly.com/tomascostapp/30min"
+								<button
+									class="tcp-btn --no-span mt-8 open-popup"
 								>
 									Agendar llamada »
-								</a>
+								</button>
 							</div>
 						);
 					})
@@ -185,3 +184,6 @@ const PLANES = [
 		</div>
 	</div>
 </section>
+
+
+<Popup />
