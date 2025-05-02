@@ -24,7 +24,7 @@ body {
 }
 
 .tcp-btn {
-	@apply bg-[#FF6900] flex w-full flex-col gap-0 h-min items-center justify-center px-6 py-4 font-bold md:w-fit rounded-full text-center text-white text-[18px] sticky bottom-6 z-50;
+	@apply bg-[#FF6900] flex w-full flex-col gap-0 h-min items-center justify-center px-6 py-4 font-bold md:w-full md:max-w-[400px] rounded-full text-center text-white text-[18px] sticky bottom-6 z-50;
 	/* 
 	position: -webkit-sticky;
 	position: -moz-sticky;
@@ -32,7 +32,12 @@ body {
 	position: -o-sticky;
 	position: sticky; */
 }
-
+.--plans-btn {
+	@apply md:hidden
+}
+.--plans-btn-desktop {
+	@apply hidden md:block
+}
 .tcp-btn.--no-span {
 	@apply py-6 text-[16px];
 }
@@ -319,6 +324,24 @@ h3 {
 	}
 }
 
+@media (min-width: 500px) {
+	.--slide-l {
+		transform: translateX(-400px);
+	}
+	@keyframes slideL {
+		to {
+			transform: translateX(-800px);
+		}
+	}
+	.--slide-r {
+		transform: translateX(-800px);
+	}
+
+	.testimonios-pagination {
+		text-align: start !important;
+	}
+}
+
 /* Carrusel testimonios */
 @media (max-width: 500px) {
 
@@ -331,6 +354,7 @@ h3 {
 	.swiper-slide {
 		transition: all .5s !important;
 	}
+
 }
 
 .border-t.border-dashed,

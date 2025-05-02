@@ -1,99 +1,104 @@
 ---
-import Popup from './Popup.astro';
+import Popup from "./Popup.astro";
 const path = Astro.url.pathname;
 
 const PLANES = [
-  {
-    icono: '/images/tomas-costa-landing-optin.svg',
-    nombre: "Opt-In",
-    descripcion: "Pensada para coaches y profesionales online que quieren más contactos calificados, sin vueltas.",
-    precioDolar: "500",
-    precioPesos: 500*1200,
-    mensajeWpp: "Hola, me interesa la Landing Opt-In",
-    incluye: [
-      "Un año de dominio pagado y su configuración",
-      "Un año de Hosting Gratis",
-	  "Certificado SSL",
-      "Diseño enfocado en vender y transmitir autoridad",
-      "Desarrollo profesional y optimizado",
-      "Optimización SEO Básica",
-      "Versión A/B para que te quedes con la mejor",
-	  "Integración con Pixel y API de Facebook para mejorar el rendimiento de tus campañas",
-      "Integración con Google Analytics y HotJar",
-      "1 mes Gratis de soporte",
-      "Hasta 10 secciones incluidas",
-      "Formulario automatizado y almacenamiento de datos en Google Sheets",
-    ],
-  },
-  {
-    icono: '/images/tomas-costa-landing-vsl.svg',
-    nombre: "VSL",
-    descripcion: "Ideal para vender servicios con un video que convence y convierte.",
-    precioDolar: "400",
-    precioPesos: 400*1200,
-    mensajeWpp: "Hola, me interesa la Landing VSL",
-    incluye: [
-      "Un año de dominio pagado y su configuración",
-      "Un año de Hosting Gratis",
-	  "Certificado SSL",
-      "Diseño enfocado en vender y transmitir autoridad",
-      "Desarrollo profesional y optimizado",
-      "Optimización SEO Básica",
-      "Versión A/B para que te quedes con la mejor",
-	  "Integración con Pixel de Facebook para mejorar el rendimiento de tus campañas",
-      "Integración con Google Analytics y HotJar",
-      "1 mes Gratis de soporte",
-      "Hasta 6 secciones incluidas",
-    ],
-  },
-  {
-    icono: '/images/tomas-costa-landing-informativa.svg',
-    nombre: "Informativa",
-    descripcion: "Explicá quién sos, qué hacés y por qué elegirte transmitiendo autoridad.",
-    precioDolar: "450",
-    precioPesos: 450*1200,
-    mensajeWpp: "Hola, me interesa la Landing Informativa",
-    incluye: [
-      "Un año de dominio pagado y su configuración",
-      "Un año de Hosting Gratis",
-	  "Certificado SSL",
-      "Diseño enfocado en vender y transmitir autoridad",
-      "Desarrollo profesional y optimizado",
-      "Optimización SEO Básica",
-      "Versión A/B para que te quedes con la mejor",
-	  "Integración con Pixel de Facebook para mejorar el rendimiento de tus campañas",
-      "Integración con Google Analytics y HotJar",
-      "1 mes Gratis de soporte",
-      "Hasta 12 secciones incluidas",
-    ],
-  },
-  {
-    icono: '/images/tomas-costa-landing-venta-directa.svg',
-    nombre: "Venta Directa",
-    descripcion: "Ideal para productos Low-Ticket y Mid-Ticket como cursos o materiales pago.",
-    precioDolar: "650",
-    precioPesos: 650*1200,
-    mensajeWpp: "Hola, me interesa la Landing Venta Directa",
-    incluye: [
-      "Un año de dominio pagado y su configuración",
-      "Un año de Hosting Gratis",
-	  "Certificado SSL",
-      "Diseño enfocado en vender y transmitir autoridad",
-      "Desarrollo profesional y optimizado",
-      "Optimización SEO Básica",
-      "Versión A/B para que te quedes con la mejor",
-      "Integración con pasarelas de pago como Stripe, Mercado Pago, etc",
-      "1 mes Gratis de soporte",
-      "Hasta 12 secciones incluidas",
-    ],
-  },
+	{
+		icono: "/images/tomas-costa-landing-optin.svg",
+		nombre: "Opt-In",
+		descripcion:
+			"Pensada para coaches y profesionales online que quieren más contactos calificados, sin vueltas.",
+		precioDolar: "500",
+		precioPesos: 500 * 1200,
+		mensajeWpp: "Hola, me interesa la Landing Opt-In",
+		incluye: [
+			"Un año de dominio pagado y su configuración",
+			"Un año de Hosting Gratis",
+			"Certificado SSL",
+			"Diseño enfocado en vender y transmitir autoridad",
+			"Desarrollo profesional y optimizado",
+			"Optimización SEO Básica",
+			"Versión A/B para que te quedes con la mejor",
+			"Integración con Pixel y API de Facebook para mejorar el rendimiento de tus campañas",
+			"Integración con Google Analytics y HotJar",
+			"1 mes Gratis de soporte",
+			"Hasta 10 secciones incluidas",
+			"Formulario automatizado y almacenamiento de datos en Google Sheets",
+		],
+	},
+	{
+		icono: "/images/tomas-costa-landing-vsl.svg",
+		nombre: "VSL",
+		descripcion:
+			"Ideal para vender servicios con un video que convence y convierte.",
+		precioDolar: "400",
+		precioPesos: 400 * 1200,
+		mensajeWpp: "Hola, me interesa la Landing VSL",
+		incluye: [
+			"Un año de dominio pagado y su configuración",
+			"Un año de Hosting Gratis",
+			"Certificado SSL",
+			"Diseño enfocado en vender y transmitir autoridad",
+			"Desarrollo profesional y optimizado",
+			"Optimización SEO Básica",
+			"Versión A/B para que te quedes con la mejor",
+			"Integración con Pixel de Facebook para mejorar el rendimiento de tus campañas",
+			"Integración con Google Analytics y HotJar",
+			"1 mes Gratis de soporte",
+			"Hasta 6 secciones incluidas",
+		],
+	},
+	{
+		icono: "/images/tomas-costa-landing-informativa.svg",
+		nombre: "Informativa",
+		descripcion:
+			"Explicá quién sos, qué hacés y por qué elegirte transmitiendo autoridad.",
+		precioDolar: "450",
+		precioPesos: 450 * 1200,
+		mensajeWpp: "Hola, me interesa la Landing Informativa",
+		incluye: [
+			"Un año de dominio pagado y su configuración",
+			"Un año de Hosting Gratis",
+			"Certificado SSL",
+			"Diseño enfocado en vender y transmitir autoridad",
+			"Desarrollo profesional y optimizado",
+			"Optimización SEO Básica",
+			"Versión A/B para que te quedes con la mejor",
+			"Integración con Pixel de Facebook para mejorar el rendimiento de tus campañas",
+			"Integración con Google Analytics y HotJar",
+			"1 mes Gratis de soporte",
+			"Hasta 12 secciones incluidas",
+		],
+	},
+	{
+		icono: "/images/tomas-costa-landing-venta-directa.svg",
+		nombre: "Venta Directa",
+		descripcion:
+			"Ideal para productos Low-Ticket y Mid-Ticket como cursos o materiales pago.",
+		precioDolar: "650",
+		precioPesos: 650 * 1200,
+		mensajeWpp: "Hola, me interesa la Landing Venta Directa",
+		incluye: [
+			"Un año de dominio pagado y su configuración",
+			"Un año de Hosting Gratis",
+			"Certificado SSL",
+			"Diseño enfocado en vender y transmitir autoridad",
+			"Desarrollo profesional y optimizado",
+			"Optimización SEO Básica",
+			"Versión A/B para que te quedes con la mejor",
+			"Integración con pasarelas de pago como Stripe, Mercado Pago, etc",
+			"1 mes Gratis de soporte",
+			"Hasta 12 secciones incluidas",
+		],
+	},
 ];
-
 ---
 
 <section class="py-[80px] overflow-clip" id="planes">
 	<div class="tcp-container">
-		<h2 class="text-[32px] font-extrabold text-center leading-[110%] textPurple">
+		<h2
+			class="text-[32px] font-extrabold text-center md:text-start leading-[110%] textPurple"
+		>
 			Encontremos
 			<br />
 			Tu Landing <span class="italic">Ideal</span>
@@ -107,73 +112,78 @@ const PLANES = [
 				{
 					PLANES.map((plan) => {
 						return (
-							<div class="testimonio-card swiper-slide bg-white rounded-xl border border-[#111]/20 px-4 py-8">
-								<img
-									class="w-[60px] h-[55px] object-contain mx-auto"
-									src={plan.icono}
-									alt="Landing Page VSL Tomas Costa"
-								/>
-								<h2 class="text-[32px] text-[#1E1E1E] font-extrabold text-center my-4 leading-[110%]">
-									Landing 
-									<span class="italic --playfair">
-										{plan.nombre}
-									</span>
-								</h2>
-								<p class="text-center text-[#1E1E1E]/80 px-4 leading-[120%]">
-									{plan.descripcion}
-								</p>
-								{path.includes('/b') && (
-								<div class="bg-white border mt-8 border-[#111]/20 p-4 rounded-lg">
-									<div class="pb-4 border-b border-dashed border-[#111]/20">
-										<p class="flex items-center justify-center gap-2 text-[14px] font-semibold text-[#1E1E1E]/80">
-											Transferencia
-											<img
-												class="h-[18px]"
-												src="/images/mercado-pago.webp"
-												alt="Mercado Pago"
-											/>
+							<div class="testimonio-card swiper-slide bg-white rounded-xl border border-[#111]/20 px-4 py-8 md:px-8">
+								<div class="md:flex md:justify-between md:item gap-8">
+									<div>
+										<img
+											class="w-[60px] h-[55px] object-contain mx-auto md:mx-0"
+											src={plan.icono}
+											alt="Landing Page VSL Tomas Costa"
+										/>
+										<h2 class="text-[32px] text-[#1E1E1E] font-extrabold text-center md:text-start my-4 leading-[110%]">
+											Landing
+											<span class="italic --playfair">
+												{plan.nombre}
+											</span>
+										</h2>
+										<p class="text-center md:text-start max-w-[500px] md:px-0 text-[#1E1E1E]/80 px-4 leading-[120%]">
+											{plan.descripcion}
 										</p>
-										<p class="text-[34px] font-extrabold mt-2 text-center text-[#1e1e1e]/80">
-											${plan.precioPesos.toLocaleString('es-AR')}
-										</p>
-									</div>
-									<div class="pt-6">
-										<p class="flex items-center justify-center gap-2 text-[14px] font-semibold text-[#1E1E1E]/80">
-											Crypto
-											<img
-												class="h-[16px]"
-												src="/images/binance.webp"
-												alt="Binance"
-											/>
-										</p>
-										<p class="text-[34px] font-extrabold mt-2 text-center text-[#1e1e1e]/80">
-											USD${plan.precioDolar}
-										</p>
-									</div>
+									</div>									
+									<button class="tcp-btn --no-span mt-8 open-popup --plans-btn-desktop hidden md:block">
+										Agendar llamada »
+									</button>
 								</div>
+								{path.includes("/b") && (
+									<div class="bg-white border mt-8 border-[#111]/20 p-4 rounded-lg">
+										<div class="pb-4 border-b border-dashed border-[#111]/20">
+											<p class="flex items-center justify-center gap-2 text-[14px] font-semibold text-[#1E1E1E]/80">
+												Transferencia
+												<img
+													class="h-[18px]"
+													src="/images/mercado-pago.webp"
+													alt="Mercado Pago"
+												/>
+											</p>
+											<p class="text-[34px] font-extrabold mt-2 text-center text-[#1e1e1e]/80">
+												$
+												{plan.precioPesos.toLocaleString(
+													"es-AR",
+												)}
+											</p>
+										</div>
+										<div class="pt-6">
+											<p class="flex items-center justify-center gap-2 text-[14px] font-semibold text-[#1E1E1E]/80">
+												Crypto
+												<img
+													class="h-[16px]"
+													src="/images/binance.webp"
+													alt="Binance"
+												/>
+											</p>
+											<p class="text-[34px] font-extrabold mt-2 text-center text-[#1e1e1e]/80">
+												USD${plan.precioDolar}
+											</p>
+										</div>
+									</div>
 								)}
-								<div class="mt-8 px-4">
-									<ul>
-										{
-										plan.incluye.map((item) => {
+								<div class="mt-8 px-4 md:px-0">
+									<ul class="md:max-h-[400px] md:flex md:flex-col md:flex-wrap">
+										{plan.incluye.map((item) => {
 											return (
-												<li class="py-3 text-[#1e1e1e] flex gap-3">
+												<li class="py-3 text-[#1e1e1e] flex gap-3 md:max-w-[30%]">
 													<img
 														class="size-[22px] min-w-[22px]"
 														src="/images/incluido.svg"
 														alt="Incluido"
 													/>
-													<span>
-														{item}
-													</span>
+													<span>{item}</span>
 												</li>
-											)
+											);
 										})}
 									</ul>
 								</div>
-								<button
-									class="tcp-btn --no-span mt-8 open-popup"
-								>
+								<button class="tcp-btn --no-span mt-8 open-popup --plans-btn">
 									Agendar llamada »
 								</button>
 							</div>
@@ -184,6 +194,5 @@ const PLANES = [
 		</div>
 	</div>
 </section>
-
 
 <Popup />
