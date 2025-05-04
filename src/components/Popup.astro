@@ -55,7 +55,7 @@
 								<input
 									type="radio"
 									name="presupuesto"
-									value="Menos de usd350"
+									value="<350"
 									class="accent-[#3B4FFF]"
 									required
 								/>
@@ -65,7 +65,7 @@
 								<input
 									type="radio"
 									name="presupuesto"
-									value="entre usd400 y usd700"
+									value="400-700"
 									class="accent-[#3B4FFF]"
 								/>
 								Entre usd400 y usd700
@@ -74,14 +74,14 @@
 								<input
 									type="radio"
 									name="presupuesto"
-									value="más de usd700"
+									value=">700"
 									class="accent-[#3B4FFF]"
 								/>
 								Más de usd700
 							</label>
 						</div>
 					</label>
-					<button type="submit" class="tcp-btn mt-6">
+					<button type="submit" class="tcp-btn mt-6 cursor-pointer">
 						Agendar
 					</button>
 				</form>
@@ -124,24 +124,28 @@
 					data.countryCode &&
 					data.presupuesto
 				) {
-					try {
-						const response = await fetch(
-							"https://hook.us2.make.com/obfsv5zrls1rg7283a49iyyfojx0ob6p",
-							{
-								method: "POST",
-								headers: { "Content-Type": "application/json" },
-								body: JSON.stringify(data),
-							},
-						);
+					if (data.presupuesto !== '<350') {
+						try {
+							const response = await fetch(
+								"https://hook.us2.make.com/obfsv5zrls1rg7283a49iyyfojx0ob6p",
+								{
+									method: "POST",
+									headers: { "Content-Type": "application/json" },
+									body: JSON.stringify(data),
+								},
+							);
 
-						if (response.ok) {
-							window.location.href = "https://calendly.com/tomascostapp/30min";
-							console.log("Response ", response);
-						} else {
-							alert("Error al enviar el formulario.");
+							if (response.ok) {
+								window.location.href = "https://calendly.com/tomascostapp/30min";
+								console.log("Response ", response);
+							} else {
+								alert("Error al enviar el formulario.");
+							}
+						} catch (error) {
+							alert("Hubo un problema al enviar los datos.");
 						}
-					} catch (error) {
-						alert("Hubo un problema al enviar los datos.");
+					} else {
+						alert('Lo sentimos pero por ahora no tenemos planes de menos de usd350')
 					}
 				}
 			});
