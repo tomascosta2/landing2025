@@ -326,7 +326,7 @@ h3 {
 
 @media (min-width: 500px) {
 	.--slide-l {
-		transform: translateX(-400px);
+		transform: translateX(-200px);
 	}
 	@keyframes slideL {
 		to {
