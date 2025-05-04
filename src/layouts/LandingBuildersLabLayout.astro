@@ -1,0 +1,23 @@
+---
+import '/src/styles/global.css';
+import '/src/styles/landingbuilderslab.css';
+import '@fontsource-variable/playfair-display';
+import '@fontsource-variable/inter';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Landing Builders Lab</title>
+	</head>
+	<body>
+		<slot />
+		
+		<!-- Animaciones -->
+        <script is:inline src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+	</body>
+</html>
+
