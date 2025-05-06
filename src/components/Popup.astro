@@ -121,7 +121,7 @@
 				const data = Object.fromEntries(formData.entries());
 
 				console.log(data);
-				//sendConversion(data);
+				sendConversion(data);
 
 				if (
 					data.email &&
@@ -129,19 +129,21 @@
 					data.countryCode &&
 					data.presupuesto
 				) {
-					if (data.presupuesto !== '<350') {
+					if (data.presupuesto !== "<350") {
 						try {
 							const response = await fetch(
 								"https://hook.us2.make.com/obfsv5zrls1rg7283a49iyyfojx0ob6p",
 								{
 									method: "POST",
-									headers: { "Content-Type": "application/json" },
+									headers: {
+										"Content-Type": "application/json",
+									},
 									body: JSON.stringify(data),
 								},
 							);
 
 							if (response.ok) {
-								window.location.href = "https://calendly.com/tomascostapp/30min";
+								//window.location.href = "https://calendly.com/tomascostapp/30min";
 								console.log("Response ", response);
 							} else {
 								alert("Error al enviar el formulario.");
@@ -150,92 +152,44 @@
 							alert("Hubo un problema al enviar los datos.");
 						}
 					} else {
-						alert('Lo sentimos pero por ahora no tenemos planes de menos de usd350')
+						alert(
+							"Lo sentimos pero por ahora no tenemos planes de menos de usd350",
+						);
 					}
 				}
 			});
 		});
 
-	const sendConversion = async (data: any) => {
-		console.log("DATA: ", data.email);
+	function getCookie(name) {
+		const value = `; ${document.cookie}`;
+		const parts = value.split(`; ${name}=`);
+		if (parts.length === 2) return parts.pop().split(";").shift();
+	}
 
-		const hashEmail = await hashSHA256(data.email);
-		const hashPhone = await hashSHA256(data.phone);
-
-		const response = await fetch(
-			"https://graph.facebook.com/v18.0/1606406710306620/events?access_token=EAAJw118ruGYBOZCFxk5tAlN6Nghe7uOtxeAiOCs31ZCDEclB9hhDqfavgXBbqDcN9VOOB8WcdPuGAYCJzH9gih9ZBeSZBVRSeNAZCZCqvNjJSH70hrZAdnyoLdHtDHwtDYY2rZCKgrtmUtDGsRNRchpXJFCKZCMnocFM5HtmINWIyjGRRmZCXq3wAdqc2IoWclAqf5ggZDZD",
-			{
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					data: [
-						{
-							event_name: "Lead",
-							event_time: Math.floor(Date.now() / 1000), // tiempo actual en segundos
-							action_source: "website",
-							user_data: {
-								em: [hashEmail],
-								ph: [hashPhone],
-							},
-							original_event_data: {
-								event_name: "Lead",
-								event_time: Math.floor(Date.now() / 1000),
-							},
-						},
-					],
-				}),
+	function generateEventId() {
+		return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+			/[xy]/g,
+			function (c) {
+				var r = (Math.random() * 16) | 0,
+					v = c === "x" ? r : (r & 0x3) | 0x8;
+				return v.toString(16);
 			},
 		);
-
-		const result = await response.json();
-		console.log(result);
-	};
-
-	async function hashSHA256(value: String) {
-		const encoder = new TextEncoder();
-		const data = encoder.encode(value.trim().toLowerCase()); // sin espacios, en minúsculas
-		const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-		const hashArray = Array.from(new Uint8Array(hashBuffer));
-		return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 	}
-</script>
 
-<!-- Meta Pixel Code -->
-<script is:inline>
-	!(function (f, b, e, v, n, t, s) {
-		if (f.fbq) return;
-		n = f.fbq = function () {
-			n.callMethod
-				? n.callMethod.apply(n, arguments)
-				: n.queue.push(arguments);
-		};
-		if (!f._fbq) f._fbq = n;
-		n.push = n;
-		n.loaded = !0;
-		n.version = "2.0";
-		n.queue = [];
-		t = b.createElement(e);
-		t.async = !0;
-		t.src = v;
-		s = b.getElementsByTagName(e)[0];
-		s.parentNode.insertBefore(t, s);
-	})(
-		window,
-		document,
-		"script",
-		"https://connect.facebook.net/en_US/fbevents.js",
-	);
-	fbq("init", "1606406710306620");
-	fbq("track", "PageView");
+	const sendConversion = async (data: any) => {
+		const eventId = generateEventId();
+		window.fbq('track', 'Lead', {email: data.email, phone: data.phone}, {eventId});
+		await fetch("http://localhost:4321/api/track/lead", {
+			method: "POST",
+			headers: { "content-type": "application/json" },
+			body: JSON.stringify({
+				email: data.email,
+				phone: data.phone,
+				fbp: getCookie("_fbp"),
+				fbc: getCookie("_fbc"),
+				eventId: eventId,
+			}),
+		});
+	};
 </script>
-<noscript
-	><img
-		height="1"
-		width="1"
-		style="display:none"
-		src="https://www.facebook.com/tr?id=942814494324978&ev=PageView&noscript=1"
-	/>
-</noscript>
-<!-- End Meta Pixel Code -->
