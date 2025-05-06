@@ -176,10 +176,21 @@
 			},
 		);
 	}
+	
+	declare global {
+		interface Window {
+			fbq: (...args: any[]) => void;
+		}
+	}
 
 	const sendConversion = async (data: any) => {
 		const eventId = generateEventId();
-		window.fbq('track', 'Lead', {email: data.email, phone: data.phone}, {eventId});
+		window.fbq(
+			"track",
+			"Lead",
+			{ email: data.email, phone: data.phone },
+			{ eventId },
+		);
 		await fetch("http://localhost:4321/api/track/lead", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
