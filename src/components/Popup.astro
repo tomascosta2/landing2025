@@ -196,7 +196,7 @@
 			{ email: data.email, phone: data.phone },
 			{ eventId },
 		);
-		await fetch("/api/track/lead", {
+		await fetch("https://www.tomascostalp.com/api/track/lead", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify({
