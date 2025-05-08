@@ -196,7 +196,7 @@
 			{ email: data.email, phone: data.phone },
 			{ eventId },
 		);
-		await fetch("http://localhost:4321/api/track/lead", {
+		await fetch("/api/track/lead", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify({
