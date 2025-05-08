@@ -1,0 +1,70 @@
+---
+const faqs = [
+  {
+    pregunta: "¿Y si recien estoy aprendiendo a programar?",
+    respuesta: "No pasa nada. Te enseñamos un método paso a paso para vender y crear landings sin conocimientos avanzados. Usamos herramientas simples, y te doy estructuras ya probadas que solo tenés que adaptar.",
+  },
+  {
+    pregunta: "¿Esto funciona si recién estoy empezando como freelancer?",
+    respuesta: "Sí, de hecho es ideal si estás empezando. Vender landings es uno de los servicios más fáciles de ofrecer, porque la mayoría de los negocios necesitan una y no saben por dónde empezar. Te enseño cómo posicionarte incluso si todavía no tenés clientes.",
+  },
+  {
+    pregunta: "¿Voy a poder cobrar bien por este servicio?",
+    respuesta: "Sí. Las landings bien hechas generan ventas, y los negocios están dispuestos a pagar por eso. Te explico cómo armar tu oferta, mostrar el valor y cerrar ventas incluso si nunca vendiste servicios antes.",
+  },
+  {
+    pregunta: "¿Necesito invertir en herramientas pagas?",
+    respuesta: "No. En la guía te muestro cómo usar herramientas gratuitas o con planes muy accesibles para que puedas empezar sin poner plata. El objetivo es que vendas primero y después decidas si querés invertir en algo más pro.",
+  },
+  {
+    pregunta: "¿Qué pasa si ya intenté vender otros servicios y no funcionó?",
+    respuesta: "Justamente por eso creé este método. Yo también probé varios servicios antes de encontrar algo que realmente se venda solo. Las landings solucionan un problema urgente (vender) y eso hace que sean mucho más fáciles de ofrecer.",
+  },
+];
+
+
+---
+
+<section id="faqs" class="relative py-[60px] lg:py-[80px] px-4">
+    <h2 class="text-[32px] text-[#111] md:text-[42px] font-semibold mb-4 text-center">Preguntas Frecuentes</h2>
+    <div class="max-w-[800px] mx-auto" id="faq-container">
+      {
+        faqs.map((item, index) => (
+          <div
+            class="faq-item w-full cursor-pointer p-[20px] border-b border-b-[#111]/50 last:border-b-0"
+            data-index={index}
+          >
+            <h3 class="faq-question font-semibold text-[18px] md:text-[20px] text-[#111] flex justify-between items-center">
+              {item.pregunta}
+              <svg class="faq-icon min-w-[18px] size-[18px] transition-all duration-300" fill="#111" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+            </h3>
+            <div class="faq-answer normal-case overflow-hidden duration-500 transition-all max-h-0">
+              <p class="text-[#111]/80 md:text-[18px] pt-[10px]">{item.respuesta}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+</section>
+
+<script is:inline>
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+    const icon = item.querySelector(".faq-icon");
+
+    question.addEventListener("click", () => {
+      const isOpen = answer.classList.contains("max-h-[2000px]");
+
+      document.querySelectorAll(".faq-answer").forEach(ans => ans.classList.remove("max-h-[2000px]"));
+      document.querySelectorAll(".faq-icon").forEach(i => i.classList.remove("rotate-45"));
+
+      if (!isOpen) {
+        answer.classList.add("max-h-[2000px]");
+        icon.classList.add("rotate-45");
+      }
+    });
+  });
+</script>
