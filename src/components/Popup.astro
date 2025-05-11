@@ -135,6 +135,10 @@
 					if (data.presupuesto !== "<350") {
 						document.getElementById('agenda-text')?.classList.toggle('hidden');
 						document.getElementById('agenda-loading')?.classList.toggle('hidden');
+
+						data.timestamp = new Date().toISOString();
+						data.landing = window.location.pathname.includes("/b") ? "B" : "A";
+
 						try {
 							const response = await fetch(
 								"https://hook.us2.make.com/obfsv5zrls1rg7283a49iyyfojx0ob6p",
