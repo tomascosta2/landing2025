@@ -378,15 +378,25 @@ h3 {
 	border-top-width: 1px;
 }
 
-.testimonios-pagination {
+.plans-pagination {
 	bottom: unset !important;
 	top: -40px !important;
 }
 
-.swiper-pagination-bullet {
+.plans-pagination .swiper-pagination-bullet {
 	border: 1px solid #4F39F6 !important;
 }
 
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
+.plans-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
 	background-color: #4F39F6 !important;
+}
+
+.testimonios-pagination {
+	bottom: -25px !important;
+}
+.testimonios-pagination .swiper-pagination-bullet {
+	background: white;
+    width: 32px;
+    border-radius: 40px;
+    height: 3px;
 }
