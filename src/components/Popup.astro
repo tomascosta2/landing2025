@@ -154,7 +154,10 @@
 							);
 
 							if (response.ok) {
-								window.location.href = "https://calendly.com/tomascostapp/30min";
+								const mensaje = `Hola Tomi! Quiero una Landing`;
+								const url = `https://wa.me/542616841853?text=${encodeURIComponent(mensaje)}`;
+
+								window.location.href = url;
 								console.log("Response ", response);
 							} else {
 								alert("Error al enviar el formulario.");
