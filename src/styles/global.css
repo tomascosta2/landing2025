@@ -32,6 +32,9 @@ body {
 	position: -o-sticky;
 	position: sticky; */
 }
+.tcp-btn.--no-fixed {
+	@apply relative bottom-0 py-3;
+}
 .--plans-btn {
 	@apply md:hidden
 }
