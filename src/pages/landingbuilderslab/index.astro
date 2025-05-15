@@ -96,7 +96,7 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
             <span class="text-[#939a9f]">Copiá y pegá nuestro sistema para</span
             > Empezar como Landing Builder
           </h1>
-          <h3 class="scriptFont underline md:text-[38px] mt-2">
+          <h3 class="scriptFont underline text-[28px] text-[#111] md:text-[38px] mt-2">
             (Sin experiencia, sin esperar años y sin regalar tu trabajo).
           </h3>
           <p class="max-w-[550px] text-[18px] text-[#111] mt-4">
@@ -105,7 +105,7 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
           </p>
           <div class="flex gap-4 mt-8">
             <!-- <a class="lb-btn --secondary" href="#!">¿Cómo Funciona?</a> -->
-            <a class="lb-btn relative" href="#!">
+            <a class="lb-btn relative overflow-visible" href="#!">
               <span class="absolute -top-1.5 -right-1.5 flex size-3">
                 <span
                   class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#083619] opacity-75"
@@ -222,13 +222,14 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
   </section>
 
   <section class="pb-[80px]">
-    <div class="max-w-[1040px] mx-auto pl-8 pr-4 border-[#111] border-l-4 py-8">
+    <div class="max-w-[1040px] mx-auto px-4 md:pl-8 md:pr-4 border-[#111] border-l-4 py-8">
       <h2 class="text-left font-black text-[42px] mx-auto leading-[100%]">
         Suena muy simple no?
-        <br /><span class="font-normal text-[32px] text-[#939a9f]"
-          >Y lo es. Pero <span class="underline">no es para cualquiera.</span>
-        </span>
+        <br />
       </h2>
+      <p class="font-normal mt-4 text-[32px] text-[#939a9f] leading-[100%]"
+        >Y lo es. Pero <span class="underline">no es para cualquiera.</span>
+      </p>
       <p class="text-[#111]/80 text-[20px] mt-4">
         No es un curso mágico.
         <br />
@@ -264,10 +265,10 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
     class="bg-[#eefdea] rounded-[20px] shadow-[#eefdea] shadow-lg py-[80px]"
   >
     <div class="max-w-[1000px] mx-auto px-4">
-      <h4 class="text-[32px] font-extrabold text-[#111] text-center">
+      <h4 class="text-[32px] leading-[110%] font-extrabold text-[#111] text-center">
         Pero... Quienes somos??
       </h4>
-      <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
         <div>
           <div class="flex items-center gap-4">
             <div class="flex">
@@ -393,7 +394,7 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
 
   <section class="py-[80px]">
     <div class="max-w-[900px] mx-auto px-4">
-      <h3 class="text-[32px] font-bold text-center text-[#111] leading-[110%]">
+      <h3 class="text-[24px] md:text-[32px] font-bold text-center text-[#111] leading-[110%]">
         No hace falta tener Miles de seguidores, hacer videos bailando en
         TikTok, ni hacer Sitios Web que parezcan un Circo
       </h3>
@@ -412,23 +413,23 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
   </section>
 
   <section
-    class="border-[#92999f] border-dashed max-w-[1040px] mx-auto px-8 pt-14 pb-8 rounded-[20px]"
+    class="border-[#92999f] border-dashed max-w-[1040px] mx-auto px-4 md:px-8 pt-14 pb-8 rounded-[20px]"
   >
     <div
       id="Pricing"
       -class="bg-[#eefdea] rounded-[20px] shadow-[#eefdea] shadow-lg py-[80px]"
     >
       <img
-        class="max-w-[600px] mx-auto mb-2"
+        class="md:max-w-[600px] mx-auto mb-2"
         src="/images/landingbuilderslab/pack-img.webp"
         alt="Landing Builders Lab Pack"
       />
-      <h2 class="text-center font-black leading-[110%] text-[42px] mb-8">
-        ¿Listo para Empezar a ser un <span class="text-[#2ada6e] underline"
+      <h2 class="text-center font-black leading-[110%] text-[32px] md:text-[42px] mb-8">
+        ¿Listo para Empezar como <span class="text-[#2ada6e] underline"
           >Landing Builder?</span
         >
       </h2>
-      <p class="text-[24px] mb-8 text-center max-w-[800px] mx-auto">
+      <p class="text-[18px] md:text-[24px] mb-8 text-center max-w-[800px] mx-auto">
         Sabés programar (o estás aprendiendo), pero <span class="font-semibold"
           >Nadie te enseña cómo empezar a ganar dinero con eso.</span
         >
@@ -454,13 +455,13 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
     <ul
       class="text-[18px] mb-8 text-[#111] flex flex-wrap max-w-[900px] mx-auto gap-4 justify-center items-start"
     >
-      <div class="w-[32%] gap-4 flex flex-col">
+      <div class="md:w-[32%] gap-4 flex flex-col">
         {firstColumn.map((feature, index) => <Feature feature={feature} />)}
       </div>
-      <div class="w-[32%] gap-4 flex flex-col">
+      <div class="md:w-[32%] gap-4 flex flex-col">
         {secondColumn.map((feature, index) => <Feature feature={feature} />)}
       </div>
-      <div class="w-[32%] gap-4 flex flex-col">
+      <div class="md:w-[32%] gap-4 flex flex-col">
         {thirdColumn.map((feature, index) => <Feature feature={feature} />)}
       </div>
     </ul>
@@ -470,9 +471,9 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
   <section
     class="pt-[80px] pb-[20px] bg-[#eefdea] rounded-[20px] shadow-[#eefdea] shadow-lg"
   >
-    <div class="max-w-[1040px] mx-auto">
+    <div class="max-w-[1040px] mx-auto px-4">
       <h3
-        class="text-[42px] font-bold text-[#111] leading-[120%] mb-12 text-center"
+        class="text-[32px] md:text-[42px] font-bold text-[#111] leading-[120%] mb-12 text-center"
       >
         Es así de fácil: <span class="font-medium"
           >Producto simple + Trabajo de Calidad + Un Nicho Específico.
@@ -482,27 +483,27 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
       </h3>
       <div class="mx-auto flex gap-4 flex-wrap justify-center">
         <img
-          class="mb-14 max-w-[30%]"
+          class="mb-14 md:max-w-[30%]"
           src="/images/landingbuilderslab/landing-builders-lab-cliente-1.webp"
           alt="Landing Builders Lab Juampi Gardonio"
         />
         <img
-          class="mb-14 max-w-[30%]"
+          class="mb-14 md:max-w-[30%]"
           src="/images/landingbuilderslab/landing-builders-lab-cliente-2.webp"
           alt="Landing Builders Lab Ivan Daacharry"
         />
         <img
-          class="mb-12 max-w-[30%]"
+          class="mb-12 md:max-w-[30%]"
           src="/images/landingbuilderslab/landing-builders-lab-cliente-3.webp"
           alt="Landing Builders Lab Mati Sanchez"
         />
         <img
-          class="mb-12 max-w-[30%]"
+          class="mb-12 md:max-w-[30%]"
           src="/images/landingbuilderslab/landing-builders-lab-cliente-4.webp"
           alt="Landing Builders Lab Mati Circulo Humano"
         />
         <img
-          class="mb-12 max-w-[30%]"
+          class="mb-12 md:max-w-[30%]"
           src="/images/landingbuilderslab/landing-builders-lab-cliente-5.webp"
           alt="Landing Builders Lab Mati Lolo Capuchi"
         />

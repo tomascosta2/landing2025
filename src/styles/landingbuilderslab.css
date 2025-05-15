@@ -9,7 +9,7 @@ body {
 }
 
 .lb-btn {
-	@apply overflow-hidden uppercase text-[20px] font-black rounded-md relative text-[#083619] md:px-14 py-4 bg-[#2BDA6E] block text-center w-full md:w-fit;
+	@apply uppercase text-[20px] font-black rounded-md relative text-[#083619] md:px-14 py-4 bg-[#2BDA6E] block text-center w-full md:w-fit;
 }
 
 .lb-btn.lb-btn--cta::after {
