@@ -5,8 +5,8 @@ const { feature } = Astro.props;
 <li
   class="p-4 rounded-lg border border-neutral-200 bg-neutral-50 flex flex-col gap-2 trasition-all duration-300 hover:shadow-lg hover:bg-neutral-100"
 >
-  <h5 class="font-semibold">✅ {feature.titulo}</h5>
+  <h5 class="font-semibold">✅ {feature?.titulo}</h5>
   <span class="font-light text-sm">
-    {feature.descripcion}
+    {feature?.descripcion}
   </span>
 </li>
