@@ -1,8 +1,29 @@
 @import "tailwindcss";
 
-.lb-btn {
-	@apply uppercase text-[18px] font-semibold md:px-14 py-4 bg-[#2BDA6E] border border-[#2BDA6E] block text-center w-full md:w-fit;
+body {
+	font-family: 'DM Sans Variable', 'Inter Variable', sans-serif;
 }
+
+.scriptFont {
+	font-family: 'Just Another Hand', cursive;
+}
+
+.lb-btn {
+	@apply overflow-hidden uppercase text-[20px] font-black rounded-md relative text-[#083619] md:px-14 py-4 bg-[#2BDA6E] block text-center w-full md:w-fit;
+}
+
+.lb-btn.lb-btn--cta::after {
+	@apply h-1 bg-[#3eb166] block content-[''] absolute w-full bottom-0 left-0;
+}
+
 .lb-btn.--secondary {
 	@apply text-[18px] px-6 py-4 bg-[#FFF] border border-[#111] block w-fit;
+}
+
+.lb-hero {
+	background: url('/images/landingbuilderslab/hero.png') no-repeat center center;
+}
+
+.lb-feature-title {
+	@apply text-[38px] leading-[100%] mb-4 tracking-[0.3px] font-normal;
 }
