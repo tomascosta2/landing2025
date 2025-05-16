@@ -36,4 +36,9 @@ import Layout from "../../layouts/Layout.astro";
 	<p class="text-center text-[14px] text-[#111]/40 px-4 pb-8">
 		© Tomás Costa Páginas Web 2025. Todos los derechos reservados.
 	</p>
+	<script is:inline>
+		window.addEventListener('load', () => {
+			fbq('track', 'CompleteRegistration');
+		})
+	</script>
 <Layout />
