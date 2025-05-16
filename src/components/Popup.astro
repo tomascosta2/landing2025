@@ -99,12 +99,18 @@
 </section>
 
 <script>
+	let choosedPlan: String = "";
+
 	// ABRIR POPUP
 	document.querySelectorAll(".open-popup").forEach((el) => {
 		el.addEventListener("click", () => {
 			document.getElementById("popup")?.classList.toggle("hidden");
+			choosedPlan = el.getAttribute('data-plan') || '';
+			console.log(choosedPlan)
 		});
 	});
+
+	console.log(choosedPlan)
 
 	document.getElementById("popup")?.addEventListener("click", (e) => {
 		console.log(e.target, " target:", document.getElementById("popup"));
@@ -138,6 +144,7 @@
 
 						data.timestamp = new Date().toISOString();
 						data.landing = window.location.pathname.includes("/b") ? "B" : "A";
+						data.tipo = choosedPlan.toString();
 
 						console.log("DATA: ", data)
 
