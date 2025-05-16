@@ -1,6 +1,6 @@
 import { r as renderers } from './chunks/internal_BsTt5pTQ.mjs';
-import { c as createExports } from './chunks/entrypoint_9VtQtp0j.mjs';
-import { manifest } from './manifest_chJkM0kI.mjs';
+import { c as createExports } from './chunks/entrypoint_DiQp9APn.mjs';
+import { manifest } from './manifest_Cu21rkFx.mjs';
 
 const serverIslandMap = new Map();;
 
@@ -12,7 +12,8 @@ const _page4 = () => import('./pages/landingbuilderslab/components/cta-button.as
 const _page5 = () => import('./pages/landingbuilderslab/components/faqs.astro.mjs');
 const _page6 = () => import('./pages/landingbuilderslab/components/feature.astro.mjs');
 const _page7 = () => import('./pages/landingbuilderslab.astro.mjs');
-const _page8 = () => import('./pages/index.astro.mjs');
+const _page8 = () => import('./pages/thankyou.astro.mjs');
+const _page9 = () => import('./pages/index.astro.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/api/track/lead.ts", _page1],
@@ -22,7 +23,8 @@ const pageMap = new Map([
     ["src/pages/landingbuilderslab/components/Faqs.astro", _page5],
     ["src/pages/landingbuilderslab/components/feature.astro", _page6],
     ["src/pages/landingbuilderslab/index.astro", _page7],
-    ["src/pages/index.astro", _page8]
+    ["src/pages/thankyou/index.astro", _page8],
+    ["src/pages/index.astro", _page9]
 ]);
 
 const _manifest = Object.assign(manifest, {
@@ -33,7 +35,7 @@ const _manifest = Object.assign(manifest, {
     middleware: () => import('./_noop-middleware.mjs')
 });
 const _args = {
-    "middlewareSecret": "401bf938-78a4-4807-a157-ade57c0e4605",
+    "middlewareSecret": "c5219234-4d08-4410-ae63-6e711d20c501",
     "skewProtection": false
 };
 const _exports = createExports(_manifest, _args);
