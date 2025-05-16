@@ -154,11 +154,7 @@
 							);
 
 							if (response.ok) {
-								const mensaje = `Hola Tomi! Quiero una Landing`;
-								const url = `https://wa.me/542616841853?text=${encodeURIComponent(mensaje)}`;
-
-								window.location.href = url;
-								console.log("Response ", response);
+								window.location.href = '/thankyou';
 							} else {
 								alert("Error al enviar el formulario.");
 							}
