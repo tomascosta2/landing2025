@@ -7,7 +7,7 @@ const POST = async ({ request }) => {
   const hashEmail = await hashSHA256(data.email);
   const hashPhone = await hashSHA256(data.phone);
   const response = await fetch(
-    "https://graph.facebook.com/v18.0/1563000057901771/events?access_token=" + undefined                                ,
+    "https://graph.facebook.com/v18.0/1563000057901771/events?access_token=EAAJw118ruGYBOZCFxk5tAlN6Nghe7uOtxeAiOCs31ZCDEclB9hhDqfavgXBbqDcN9VOOB8WcdPuGAYCJzH9gih9ZBeSZBVRSeNAZCZCqvNjJSH70hrZAdnyoLdHtDHwtDYY2rZCKgrtmUtDGsRNRchpXJFCKZCMnocFM5HtmINWIyjGRRmZCXq3wAdqc2IoWclAqf5ggZDZD",
     {
       method: "POST",
       headers: {
