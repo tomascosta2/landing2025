@@ -11,7 +11,7 @@ const $$Index = createComponent(($$result, $$props, $$slots) => {
   const url = new URL(Astro2.request.url);
   const status = url.searchParams.get("status");
   console.log("STATUS: ", status);
-  return renderTemplate`${renderComponent($$result, "LandingBuildersLabLayout", $$LandingBuildersLabLayout, {}, { "default": ($$result2) => renderTemplate`${status !== "opted-in" && renderTemplate`${maybeRenderHead()}<div class="fixed top-0 left-0 w-full h-full px-4 flex items-center bg-black/50 backdrop-blur-md"> <div class="bg-white w-full py-8 px-6 rounded-lg"> <h3 class="font-bold leading-[120%]">
+  return renderTemplate`${renderComponent($$result, "LandingBuildersLabLayout", $$LandingBuildersLabLayout, {}, { "default": ($$result2) => renderTemplate`${status !== "opted-in" && renderTemplate`${maybeRenderHead()}<div class="fixed top-0 left-0 w-full h-full px-4 flex items-center bg-black/50 backdrop-blur-md"> <div class="bg-white w-full max-w-[500px] mx-auto py-8 px-6 rounded-lg"> <h3 class="font-bold leading-[120%]">
 OBTENE EL PASO A PASO QUE ME LLEVO DE MATARME HACIENDO
 						WEBS DE U$200 A COBRAR +U$600 POR LANDINGS SIMPLES
 </h3> <form class="space-y-4 mt-4" method="POST" action="/api/opt-in/submit-form"> <div> <label for="nombre" class="block font-semibold mb-1">
@@ -27,7 +27,7 @@ PARA DISEÑADORES O DESARROLLADORES WEB
 </p> <div class="text-white max-w-3xl mx-auto px-6 py-12"> <h1 class="text-3xl mb-4 font-bold leading-tight">
 Cómo pasé de cobrar U$200 a U$2.500/mes vendiendo páginas de
 					aterrizaje faciles de hacer.
-</h1> <img class="mb-4" src="/images/landingbuilderslab/screenshot-1.jpg" alt="10k como desarrollador web"> <p class="mb-4">
+</h1> <img class="mb-4 mx-auto" src="/images/landingbuilderslab/screenshot-1.jpg" alt="10k como desarrollador web"> <p class="mb-4">
 Muchos piensan que es extremadamente difícil, que hay que
 					trabajar 10 horas por día o que hay que esperar años para
 					llegar a los U$2.500 por mes vendiendo solo páginas de
