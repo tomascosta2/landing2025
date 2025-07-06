@@ -7,10 +7,11 @@ import 'es-module-lexer';
 import buffer from 'node:buffer';
 import crypto$1 from 'node:crypto';
 import { Http2ServerResponse } from 'node:http2';
-import { a as appendForwardSlash, j as joinPaths, r as removeTrailingForwardSlash, p as prependForwardSlash, t as trimSlashes, f as fileExtension, s as slash, c as collapseDuplicateTrailingSlashes, h as hasFileExtension } from './path_BuZodYwm.mjs';
+import { b as appendForwardSlash, j as joinPaths, r as removeTrailingForwardSlash, p as prependForwardSlash, c as trimSlashes, f as fileExtension, s as slash, d as collapseDuplicateTrailingSlashes, h as hasFileExtension } from './index_CCxZAn8N.mjs';
 import { unflatten as unflatten$1, stringify as stringify$1 } from 'devalue';
 import { createStorage, builtinDrivers } from 'unstorage';
 import '@vercel/routing-utils';
+import 'deterministic-object-hash';
 import nodePath from 'node:path';
 
 function shouldAppendForwardSlash(trailingSlash, buildFormat) {
