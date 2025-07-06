@@ -28,6 +28,34 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^/b/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/landingbuilderslab/components/cta/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/landingbuilderslab/components/cta-button/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/landingbuilderslab/components/Faqs/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/landingbuilderslab/components/feature/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/landingbuilderslab/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/thankyou/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^/$",
 			"dest": "_render"
 		}
