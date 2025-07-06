@@ -20,7 +20,15 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^/api/opt-in/submit-form/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^/api/track/lead/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/$",
 			"dest": "_render"
 		}
 	]
