@@ -1,7 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import vercel from '@astrojs/vercel/serverless';
+// @ts-expect-error: módulo sin tipos declarados
+import vercel from '@astrojs/vercel/edge';
 
 export default defineConfig({
   vite: {
