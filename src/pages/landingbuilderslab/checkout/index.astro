@@ -78,13 +78,15 @@ const testimonials = [
 ---
 
 <LandingBuildersLabLayout>
-  <section class="bg-[#FEFEFE] px-8 relative min-h-screen w-full">
-    <div class="w-full absolute -top-[300px] z-10 left-0">
+  <section
+    class="bg-[#FEFEFE] px-8 relative min-h-screen w-full overflow-x-hidden"
+  >
+    <div class="w-full absolute -top-[50px] lg:-top-[300px] z-10 left-0">
       <img
         src="/images/bubble-lbl.svg"
         width="960"
         height="960"
-        class="mx-auto"
+        class="mx-auto scale-200 lg:scale-none"
       />
     </div>
     <div class="max-w-[1000px] z-20 mx-auto pt-12 pb-8 relative">
@@ -95,35 +97,35 @@ const testimonials = [
       />
 
       <div
-        class="rounded-4xl p-12 relative flex flex-col justify-between min-h-[400px] bg-[url('/images/landingbuilderslab/co-hero-bg.png')] bg-cover mt-12"
+        class="rounded-4xl p-6 lg:p-12 relative flex flex-col justify-between min-h-[300px] lg:min-h-[400px] bg-[url('/images/landingbuilderslab/co-hero-bg.png')] bg-cover mt-12"
       >
-        <h1 class="text-3xl text-white font-bold">
+        <h1 class="text-2xl lg:text-3xl text-white font-bold">
           Descubrí cómo pasar de ser un freelancer<span class="font-light">
             más a tener tu propia empresa
           </span>y superar los $2.500 USD al mes
         </h1>
         <img
-          class="w-[160px] h-auto"
+          class="w-[160px] h-auto hidden lg:block"
           src="/images/landingbuilderslab/lbl-logo-white.svg"
           alt="Landing Builders Lab 2025"
         />
         <img
           width="550"
           height="349.92"
-          class="h-[100%] w-auto absolute -right-20 -bottom-10"
+          class="w-full h-auto lg:h-[100%] lg:w-auto lg:absolute -mb-8 scale-125 lg:scale-none lg:m-0 lg:-right-10 lg:-bottom-10"
           src="/images/landingbuilderslab/pack-img.png"
         />
       </div>
-      <div class="mt-18 flex w-full gap-6 flex-nowrap">
+      <div class="mt-18 flex flex-col lg:flex-row w-full gap-6 flex-nowrap">
         <iframe
           loading="lazy"
           id="fancybox-frame1751838020380"
           name="fancybox-frame1751838020380"
-          class="fancybox-iframe h-[600px] w-8/12 border rounded-lg border-neutral-300"
+          class="fancybox-iframe h-[600px] lg:w-8/12 border rounded-lg border-neutral-300"
           allowtransparency="true"
           src="https://pay.hotmart.com/Q99657630D?checkoutMode=2&off=v0a5vt01&_hi=eyJjaWQiOiIxNzUxODM2MjY2NjMyNTgwODk0NTA2NjM2NjY1NjAwIiwiYmlkIjoiMTc1MTgzNjI2NjYzMjU4MDg5NDUwNjYzNjY2NTYwMCIsInNpZCI6IjM5NDUzYTRiM2ExMTQ3ZGI5NmU5NGI5MDRmNWU2ZWM2In0=.1751838020215"
           allow="payment"></iframe>
-        <div class="flex flex-col gap-4 max-w-4/12 w-full">
+        <div class="flex flex-col gap-4 lg:max-w-4/12 w-full">
           {
             safityItems.map((item) => (
               <div class="border border-neutral-300 p-4 rounded-lg bg-neutral-100">
