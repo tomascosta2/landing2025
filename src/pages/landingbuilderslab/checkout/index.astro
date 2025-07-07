@@ -1,0 +1,240 @@
+---
+import LandingBuildersLabLayout from "../../../layouts/LandingBuildersLabLayout.astro";
+import Faqs from "../components/Faqs.astro";
+
+const safityItems = [
+  {
+    titulo: "🔒️ Garantía de Satisfacción Total",
+    descripcion:
+      "Si LandingBuildersLab no supera tus expectativas en los primeros 7 días, te devolvemos tu dinero, sin preguntas.",
+  },
+  {
+    titulo: "💳️️ Pago Seguro y Protegido",
+    descripcion:
+      "Tu información está 100% segura con nuestra plataforma de pagos encriptada.",
+  },
+  {
+    titulo: "📩 Acceso Inmediato",
+    descripcion:
+      "Comienza a aplicar las estrategias desde el momento de tu compra.",
+  },
+  {
+    titulo: "📽️ Contenido en video 24/7",
+    descripcion:
+      "Aprendé con clases prácticas y directas, disponibles en cualquier lugar y momento.",
+  },
+  {
+    titulo: "📖️️ Acceso de por vida",
+    descripcion:
+      "Mirá las clases a tu ritmo, las veces que quieras, cuando quieras.",
+  },
+];
+
+const courseContent = [
+  {
+    titulo: "✅ ¿Cómo dejar de competir por precio?",
+    descripcion:
+      "Aprendé a posicionarte como especialista en un nicho puntual y a atraer clientes que valoran lo que hacés y están dispuestos a pagarlo.",
+  },
+  {
+    titulo: "✅ ¿Cómo crear una oferta que sea fácil de vender?",
+    descripcion:
+      "Te mostramos cómo presentar tu servicio de forma clara y concreta, enfocada en resultados, para que no tengas que convencer a nadie ni bajar tus precios.",
+  },
+  {
+    titulo: "✅ ¿Cómo usar anuncios para conseguir clientes reales?",
+    descripcion:
+      "No necesitás campañas complejas ni presupuestos enormes. Te mostramos cómo armar anuncios simples y directos que hablen el idioma de tu cliente ideal, para que llegues justo a quien necesita lo que ofrecés.",
+  },
+  {
+    titulo: '✅ ¿Cómo construir tu "mini marca personal"?',
+    descripcion:
+      "No hace falta tener miles de seguidores. Una presencia online clara y enfocada en tu nicho hace que tus posibles clientes entiendan rápido qué hacés, para quién y por qué sos la mejor opción.",
+  },
+  {
+    titulo: "✅ ¿Cómo convertir seguidores en clientes reales?",
+    descripcion:
+      "Las historias bien pensadas hacen que la persona del otro lado diga “esto es lo que necesito”. Te enseñamos cómo usarlas para abrir conversaciones y cerrar clientes.",
+  },
+];
+
+const testimonials = [
+  {
+    value:
+      "Lo que más me sirvió fue entender cómo presentarme como alguien que vende una solución. Antes pasaba presupuesto y quedaba en la nada. Ahora tengo un enfoque más claro y cierro más fácil. De hecho, cerré dos clientes en la misma semana aplicando lo del módulo de propuesta.",
+    author: "Agustín F.",
+  },
+  {
+    value:
+      "Siempre me costó explicarle al cliente por qué mi trabajo valía lo que valía. En el curso aprendí a armar una oferta que tenga sentido para ellos, no solo para mí. Ahora no tengo miedo de cobrar más porque sé cómo justificarlo bien.",
+    author: "Valentina G.",
+  },
+  {
+    value:
+      "Sabía algo de Wordpress pero no sabía cómo venderme. Estaba trabado en cobrar barato y esperar a que llegue algún proyecto. Con el curso entendí cómo mostrar lo que hago de forma más estratégica y eso me ayudó a empezar a moverme con otra cabeza.",
+    author: "Santino M.",
+  },
+];
+---
+
+<LandingBuildersLabLayout>
+  <section
+    class="bg-[#FEFEFE] px-8 relative min-h-screen w-full overflow-x-hidden"
+  >
+    <div class="w-full absolute -top-[50px] lg:-top-[300px] z-10 left-0">
+      <img
+        src="/images/bubble-lbl.svg"
+        width="960"
+        height="960"
+        class="mx-auto scale-200 lg:scale-none"
+      />
+    </div>
+    <div class="max-w-[1000px] z-20 mx-auto pt-12 pb-8 relative">
+      <img
+        class="mx-auto w-[160px] h-auto"
+        src="/images/landingbuilderslab/landing-builders-lab-logo.png"
+        alt="Landing Builders Lab 2025"
+      />
+
+      <div
+        class="rounded-4xl p-6 lg:p-12 relative flex flex-col justify-between min-h-[300px] lg:min-h-[400px] bg-[url('/images/landingbuilderslab/co-hero-bg.png')] bg-cover mt-12"
+      >
+        <h1 class="text-2xl lg:text-3xl text-white font-bold">
+          Descubrí cómo pasar de ser un freelancer<span class="font-light">
+            más a tener tu propia empresa
+          </span>y superar los $2.500 USD al mes
+        </h1>
+        <img
+          class="w-[160px] h-auto hidden lg:block"
+          src="/images/landingbuilderslab/lbl-logo-white.svg"
+          alt="Landing Builders Lab 2025"
+        />
+        <img
+          width="550"
+          height="349.92"
+          class="w-full h-auto lg:h-[100%] lg:w-auto lg:absolute -mb-8 scale-125 lg:scale-none lg:m-0 lg:-right-10 lg:-bottom-10"
+          src="/images/landingbuilderslab/pack-img.png"
+        />
+      </div>
+      <div class="mt-18 flex flex-col lg:flex-row w-full gap-6 flex-nowrap">
+        <iframe
+          loading="lazy"
+          id="fancybox-frame1751838020380"
+          name="fancybox-frame1751838020380"
+          class="fancybox-iframe h-[600px] lg:w-8/12 border rounded-lg border-neutral-300"
+          allowtransparency="true"
+          src="https://pay.hotmart.com/Q99657630D?checkoutMode=2&off=v0a5vt01&_hi=eyJjaWQiOiIxNzUxODM2MjY2NjMyNTgwODk0NTA2NjM2NjY1NjAwIiwiYmlkIjoiMTc1MTgzNjI2NjYzMjU4MDg5NDUwNjYzNjY2NTYwMCIsInNpZCI6IjM5NDUzYTRiM2ExMTQ3ZGI5NmU5NGI5MDRmNWU2ZWM2In0=.1751838020215"
+          allow="payment"></iframe>
+        <div class="flex flex-col gap-4 lg:max-w-4/12 w-full">
+          {
+            safityItems.map((item) => (
+              <div class="border border-neutral-300 p-4 rounded-lg bg-neutral-100">
+                <h3 class="font-bold">{item.titulo}</h3>
+                <p class="text-sm mt-2">{item.descripcion}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="p-8 w-full relative bg-white border border-neutral-300 mt-12 lbl-features-section"
+  >
+    <div class="space-y-8 text-white relative z-10">
+      <img
+        class="mx-auto w-[160px] h-auto"
+        src="/images/landingbuilderslab/lbl-logo-white.svg"
+        alt="Landing Builders Lab 2025"
+      />
+
+      <h3 class="text-3xl font-bold text-center">
+        Esto es lo que veremos en LandingBuildersLab:
+      </h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        {
+          courseContent.map((item) => (
+            <div class="text-center max-w-[420px]">
+              <h4 class="font-semibold text-lg">{item.titulo}</h4>
+              <p>{item.descripcion}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#FEFEFE] px-8 relative w-full">
+    <div class="max-w-[1000px] mx-auto py-12 relative">
+      <div class="space-y-8">
+        <h3 class="text-3xl font-bold text-center">
+          Lo aplicaron y cerraron más clientes. Así de simple
+        </h3>
+        <div class="grid gap-8 lg:grid-cols-3 text-[#2A2F32]">
+          {
+            testimonials.map((item) => (
+              <div class="text-sm">
+                <p class="italic">{item.value}</p>
+                <h5 class="font-bold mt-2">{item.author}</h5>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <Faqs />
+      <p class="text-center py-4 text-[14px] text-[#111]/80">
+        © Landing Builders Lab 2025. Todos los derechos reservados.
+      </p>
+      <p
+        class="text-center text-[14px] text-[#111]/40 max-w-[800px] mx-auto pb-8"
+      >
+        Los resultados mencionados en este curso son ejemplos de lo que algunas
+        personas han logrado aplicando estas estrategias. No garantizamos que
+        vayas a obtener los mismos resultados. Tu éxito depende de múltiples
+        factores como tu dedicación, habilidades, contexto y nivel de acción.
+        Este curso está diseñado para enseñarte herramientas y procesos, pero no
+        podemos prometer resultados específicos.
+        <br />
+        Este sitio no forma parte de Facebook ni de Meta Platforms, Inc. Además,
+        este sitio no está respaldado por Facebook ni Meta Platforms, Inc. de ninguna
+        manera. Facebook es una marca registrada de Meta Platforms, Inc.
+      </p>
+    </div>
+  </section>
+  <a
+    href="https://wa.me/5492616841853?text=Hola%2C%20me%20interesa%20el%20curso%20LandingBuildersLab"
+    class="w-full lg:w-auto lg:rounded-md lg:right-10 lg:bottom-10 block fixed absolute bottom-0 z-20 px-4 py-2 flex justify-center items-center gap-4 wa-btn cursor-pointer"
+  >
+    <img src="/images/landingbuilderslab/WhatsApp.png" class="h-12" />
+    <p class="text-white leading-4">
+      <span class="font-bold">¿Tenés dudas?</span>
+      <br />¡Escribinos por hatsApp!
+    </p>
+  </a>
+</LandingBuildersLabLayout>
+
+<style>
+  .lbl-features-section {
+    background: #060e0a;
+    overflow: hidden;
+  }
+
+  .lbl-features-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("/images/landingbuilderslab/co-hero-bg.png");
+    background-size: cover;
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    filter: blur(15px);
+  }
+
+  .wa-btn {
+    background: linear-gradient(to top, #20a051, #2bda6e);
+    box-shadow: 0 0 15px 0 #20a0515b;
+  }
+</style>
