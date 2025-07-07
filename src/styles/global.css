@@ -12,9 +12,14 @@
 	@apply bg-[#4F39F6];
 }
 
+.hm-input {
+	@apply w-full border-[0.5px] bg-neutral-50 border-neutral-300 rounded px-4 py-2
+}
+
 body {
 	font-family: 'Inter Variable', sans-serif;
 }
+
 * {
 	scroll-behavior: smooth !important;
 }
@@ -32,15 +37,19 @@ body {
 	position: -o-sticky;
 	position: sticky; */
 }
+
 .tcp-btn.--no-fixed {
 	@apply relative bottom-0 py-3;
 }
+
 .--plans-btn {
 	@apply md:hidden
 }
+
 .--plans-btn-desktop {
 	@apply hidden md:block
 }
+
 .tcp-btn.--no-span {
 	@apply py-6 text-[16px];
 }
@@ -104,6 +113,7 @@ section:not(#popup) {
 	background-color: transparent;
 	color: transparent;
 }
+
 .tcp-btn.animate {
 	pointer-events: none;
 	animation: btnAnimation ease-in-out both;
@@ -331,11 +341,13 @@ h3 {
 	.--slide-l {
 		transform: translateX(0px);
 	}
+
 	@keyframes slideL {
 		to {
 			transform: translateX(-800px);
 		}
 	}
+
 	.--slide-r {
 		transform: translateX(-800px);
 	}
@@ -397,9 +409,10 @@ h3 {
 .testimonios-pagination {
 	bottom: -25px !important;
 }
+
 .testimonios-pagination .swiper-pagination-bullet {
 	background: white;
-    width: 32px;
-    border-radius: 40px;
-    height: 3px;
+	width: 32px;
+	border-radius: 40px;
+	height: 3px;
 }

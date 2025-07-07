@@ -1,4 +1,5 @@
 ---
+import PopUp from "../../components/PopUp/PopUp.astro";
 import LandingBuildersLabLayout from "../../layouts/LandingBuildersLabLayout.astro";
 import Faqs from "./components/Faqs.astro";
 import CTAButton from "./components/cta-button.astro";
@@ -131,7 +132,9 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
             <span class="text-[#939a9f]">Copiá y pegá nuestro sistema para</span
             > Empezar como Landing Builder
           </h1>
-          <h3 class="scriptFont underline text-[28px] text-[#111] md:text-[38px] mt-2">
+          <h3
+            class="scriptFont underline text-[28px] text-[#111] md:text-[38px] mt-2"
+          >
             (Sin experiencia, sin esperar años y sin regalar tu trabajo).
           </h3>
           <p class="max-w-[550px] text-[18px] text-[#111] mt-4">
@@ -257,13 +260,15 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
   </section>
 
   <section class="pb-[80px]">
-    <div class="max-w-[1040px] mx-auto px-4 md:pl-8 md:pr-4 border-[#111] border-l-4 py-8">
+    <div
+      class="max-w-[1040px] mx-auto px-4 md:pl-8 md:pr-4 border-[#111] border-l-4 py-8"
+    >
       <h2 class="text-left font-black text-[42px] mx-auto leading-[100%]">
         Suena muy simple no?
         <br />
       </h2>
-      <p class="font-normal mt-4 text-[32px] text-[#939a9f] leading-[100%]"
-        >Y lo es. Pero <span class="underline">no es para cualquiera.</span>
+      <p class="font-normal mt-4 text-[32px] text-[#939a9f] leading-[100%]">
+        Y lo es. Pero <span class="underline">no es para cualquiera.</span>
       </p>
       <p class="text-[#111]/80 text-[20px] mt-4">
         No es un curso mágico.
@@ -300,7 +305,9 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
     class="bg-[#eefdea] rounded-[20px] shadow-[#eefdea] shadow-lg py-[80px]"
   >
     <div class="max-w-[1000px] mx-auto px-4">
-      <h4 class="text-[32px] leading-[110%] font-extrabold text-[#111] text-center">
+      <h4
+        class="text-[32px] leading-[110%] font-extrabold text-[#111] text-center"
+      >
         Pero... Quienes somos??
       </h4>
       <div class="mt-8 grid md:grid-cols-2 gap-8">
@@ -429,7 +436,9 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
 
   <section class="py-[80px]">
     <div class="max-w-[900px] mx-auto px-4">
-      <h3 class="text-[24px] md:text-[32px] font-bold text-center text-[#111] leading-[110%]">
+      <h3
+        class="text-[24px] md:text-[32px] font-bold text-center text-[#111] leading-[110%]"
+      >
         No hace falta tener Miles de seguidores, hacer videos bailando en
         TikTok, ni hacer Sitios Web que parezcan un Circo
       </h3>
@@ -459,13 +468,18 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
         src="/images/landingbuilderslab/pack-img.webp"
         alt="Landing Builders Lab Pack"
       />
-      <h2 class="text-center font-black leading-[110%] text-[32px] md:text-[42px] mb-8">
+      <h2
+        class="text-center font-black leading-[110%] text-[32px] md:text-[42px] mb-8"
+      >
         ¿Listo para Empezar como <span class="text-[#2ada6e] underline"
           >Landing Builder?</span
         >
       </h2>
-      <p class="text-[18px] md:text-[24px] mb-8 text-center max-w-[800px] mx-auto">
-        Sabés hacer páginas (o estás aprendiendo), pero <span class="font-semibold"
+      <p
+        class="text-[18px] md:text-[24px] mb-8 text-center max-w-[800px] mx-auto"
+      >
+        Sabés hacer páginas (o estás aprendiendo), pero <span
+          class="font-semibold"
           >Nadie te enseña cómo empezar a ganar dinero con eso.</span
         >
         <span class="block w-full h-4"></span><span class="font-bold underline"
@@ -548,6 +562,101 @@ const thirdColumn = productFeatures.filter((_, index) => index % 3 === 2);
   </section>
 
   <Faqs />
+  <PopUp id="ctapop">
+    <div
+      class="p-8 relative bg-[url('/images/landingbuilderslab/co-hero-bg.png')] bg-cover"
+    >
+      <h1
+        class="text-[22px] lg:text-[26px] max-w-11/12 leading-6 text-white font-bold"
+      >
+        Descubrí cómo pasar de ser un freelancer<span class="font-light">
+          más a tener tu propia empresa
+        </span>y superar los $2.500 USD al mes
+      </h1>
+      <img
+        class="w-[90px] h-auto mt-8 ml-auto"
+        src="/images/landingbuilderslab/lbl-logo-white.svg"
+        alt="Landing Builders Lab 2025"
+      />
+    </div>
+    <div class="p-8 lg:max-w-10/12 mx-auto">
+      <h3 class="text-2xl font-light text-center max-w-10/12 mx-auto">
+        <span class="font-semibold">PASO 1:</span> Empecemos creando tu cuenta
+      </h3>
+      <form
+        klicksend-form-id="qLuy20o"
+        autocomplete="on"
+        method="post"
+        class="mt-4 flex flex-col gap-4"
+        action="//handler.send.hotmart.com/subscription/qLuy20o"
+      >
+        <input
+          type="text"
+          class="hm-input"
+          autocomplete="on"
+          name="first_name"
+          id="first_name"
+          placeholder="Nombre"
+          value=""
+        />
+        <input
+          type="email"
+          class="hm-input"
+          autocomplete="on"
+          name="email"
+          id="email"
+          placeholder="Email"
+          value=""
+          required
+        />
+        <input
+          type="text"
+          class="hm-input"
+          autocomplete="on"
+          name="phone"
+          id="phone"
+          placeholder="WhatsApp (Opcional)"
+          value=""
+        />
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input
+            type="text"
+            autocomplete="new-password"
+            name="b_qLuy20o"
+            tabindex="-1"
+            value=""
+          />
+        </div>
+        <button
+          klicksend-form-submit-id="qLuy20o"
+          class="lb-btn mx-auto cursor-pointer"
+        >
+          <span class="text-lg">Avanzar al Paso 2</span>
+          <span class="text-[#111]/80 text-[14px] block font-normal opacity-80"
+            >* Último paso para unirte a LandingBuildersLab! *</span
+          >
+        </button>
+        <script is:inline>
+          var pageParams = new URLSearchParams(window.location.search);
+          var form = document.querySelector(
+            'form[klicksend-form-id="qLuy20o"]'
+          );
+          var formActionUrl = new URL(form.action);
+          var formActionSearchParams =
+            formActionUrl.searchParams.size > 0
+              ? formActionUrl.searchParams.toString() + "&"
+              : "";
+          var combinedParams = formActionSearchParams + pageParams.toString();
+
+          form.action =
+            formActionUrl.origin +
+            formActionUrl.pathname +
+            "?" +
+            combinedParams;
+        </script>
+      </form>
+    </div>
+  </PopUp>
 </LandingBuildersLabLayout>
 
 <p class="text-center py-4 text-[14px] text-[#111]/80">
