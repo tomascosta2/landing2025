@@ -9,7 +9,19 @@ const status = url.searchParams.get("status");
 console.log("STATUS: ", status);
 ---
 
+
 <LandingBuildersLabLayout>
+
+	{
+		status === "opted-in" && (
+			<script is:inline>
+				window.addEventListener('load', () => {
+					fbq('track', 'Lead');
+				})
+			</script>
+		)
+	}
+	
 	{
 		status !== "opted-in" && (
 			<div class="fixed top-0 left-0 w-full h-full px-4 flex items-center bg-black/50 backdrop-blur-md">
@@ -68,14 +80,14 @@ console.log("STATUS: ", status);
 			</div>
 		)
 	}
-	<div class="space-y-6 text-[18px]">
-		<div class="bg-gray-800">
+	<div class="space-y-6 text-[20px] font-medium">
+		<div class="bg-gray-800 pb-12">
 			<p
 				class="text-white max-w-3xl mx-auto px-6 text-center border-b border-b-white/30 py-2"
 			>
 				PARA DISEÑADORES O DESARROLLADORES WEB
 			</p>
-			<div class="text-white max-w-3xl mx-auto px-6 py-12">
+			<div class="text-white max-w-3xl mx-auto px-6 pt-12">
 				<h1 class="text-3xl mb-4 font-bold leading-tight">
 					Cómo pasé de cobrar U$200 a U$2.500/mes vendiendo páginas de
 					aterrizaje faciles de hacer.
@@ -92,7 +104,7 @@ console.log("STATUS: ", status);
 					aterrizaje.
 				</p>
 				<p class="mb-4">
-					pero en realidad solo hay que tomarse un tiempo para
+					Pero en realidad solo hay que tomarse un tiempo para
 					establecer las bases de tu negocio.
 				</p>
 				<p class="mb-4">
@@ -106,7 +118,7 @@ console.log("STATUS: ", status);
 				</p>
 			</div>
 		</div>
-		<div class="max-w-3xl mx-auto px-6 py-12">
+		<div class="max-w-3xl mx-auto px-6 pt-12 pb-8">
 			<p class="mb-4 font-bold">
 				Imaginá que estás en el medio del océano, solo, con una pala en
 				la mano...
@@ -115,13 +127,13 @@ console.log("STATUS: ", status);
 			<p class="mb-4">
 				Estás flotando arriba de una balsa improvisada, y ves una isla a
 				lo lejos: esa isla es tu negocio soñado, donde ganás U$2.500 al
-				mes o más, con clientes que valoran tu trabajo y no el tipico
+				mes o más, con clientes que valoran tu trabajo y no el típico
 				que tiene un auto de 50 mil dolares pero le parece caro tu
 				presupuesto de 300.
 			</p>
 
 			<p class="mb-4">
-				La mayoría de la gente se pone a palar el agua con
+				La mayoría de la gente se pone a palear el agua con
 				desesperación, trabajando 10 horas por día para avanzar.
 				Agotados, frustrados, sintiendo que dan todo pero no se mueven.
 			</p>
@@ -135,19 +147,19 @@ console.log("STATUS: ", status);
 			</p>
 
 			<div class="bg-gray-200 mb-4 p-4 rounded-lg">
-				<p class="text-lg font-semibold">
+				<p class="text-[18px] font-semibold">
 					💡 La diferencia entre estar 2 años paleando o llegar en
 					semanas con motor es justamente esto que estás por aprender:
 					los fundamentos que te dan claridad, foco y aceleración.
 				</p>
 			</div>
 
-			<ul class="list-disc mb-4 pl-6 space-y-1">
-				<li>
+			<ul class="my-6 space-y-1">
+				<li class="mb-6">
 					✅ Vas a poder cobrar entre U$450 y U$600 por landings, de
 					las cuales podés hacer tranquilamente 2 por semana.
 				</li>
-				<li>
+				<li class="mb-6">
 					✅ Te vas a establecer como una autoridad en un nicho
 					específico.
 				</li>
@@ -201,11 +213,11 @@ console.log("STATUS: ", status);
 			</p>
 
 			<div class="bg-gray-200 mb-4 p-4 rounded-lg space-y-2">
-				<p class="text-sm">
+				<p class="text-[16px]">
 					❌ <strong>Mala oferta:</strong> “Hago páginas de aterrizaje
 					modernas, optimizadas y responsivas.”
 				</p>
-				<p class="text-sm">
+				<p class="text-[16px]">
 					✅ <strong>Buena oferta:</strong> “Te ayudo a conseguir llamadas
 					calificadas en automático con una landing page hecha a medida
 					para coaches fitness que venden asesorías de U$800 o más.”
@@ -220,7 +232,7 @@ console.log("STATUS: ", status);
 				U$600 con solo 200 seguidores.
 			</p>
 			<ul class="list-disc pl-6 space-y-1">
-				<li>Optimiza tu perfil para tu nicho.</li>
+				<li>Optimizá tu perfil para tu nicho.</li>
 				<li>Empezá aunque no esté perfecto.</li>
 				<li>Demostrá autoridad, no busques viralidad.</li>
 			</ul>
@@ -261,12 +273,125 @@ console.log("STATUS: ", status);
 				</p>
 			</div>
 
-			<div class="pt-6 text-center">
+			<p class="my-4">
+				Tomamos todo lo que he aprendido durante estos 2 años, el paso a paso que me 
+				llevo de matarme haciendo webs eternas por las que me pagaban U$200 a vender 
+				Landings Simples de U$500 a U$600 todas las semanas y lo convertimos en	un curso 
+				potente llamado:
+			</p>
+
+			<p class="font-bold uppercase my-6">
+				Landing Builders Lab
+			</p>
+
+			<p class="mb-4">
+				No es un curso con relleno, ni un curso de diseño o desarrollo,
+				son las claves que determinan si sos un freelancer esclavo de su trabajo
+				o el dueño de un negocio exitoso que puede escalar y tener empleados.
+				<br><br>
+				Vas a aprender:
+			</p>
+
+			<ul>
+				<li>✅ Cómo encontrar tu nicho de oro y dejar de competir por precio</li>
+				<li>✅ Cómo crear una oferta que sea fácil de vender</li>
+				<li>✅ Cómo usar anuncios para conseguir clientes reales</li>
+				<li>✅ Cómo construir tu "mini marca personal"</li>
+				<li>✅ Cómo convertir seguidores en clientes reales</li>
+			</ul>
+
+			<p class="mt-8">
+				Si alguna vez quisiste:
+				<br><br>
+				Dejar de perseguir malos clientes.
+				<br><br>
+				Atraer buenos clientes en automatico.
+				<br><br>
+				Que no te regateen precios.
+				<br><br>
+				Y no caer en la trampa del freelancer que no quiere un trabajo normal para ser libre pero termina trabajando 3 veces más.
+				<br><br>
+				Este es tu plan de salida.
+				<br><br>
+				Son U$47.
+				<br><br>
+				Con UNA sola landing multiplicas x10 tu inversión.
+			</p>
+
+
+		</div>
+		<div class="bg-gray-900 py-12 px-4">
+			<div class="text-center">
+				<h3 class="text-orange-400 font-bold italic text-[28px] mb-6 leading-[120%]">Obtene el Curso Completo por <span class="text-green-500 underline">U$47</span></h3>
 				<a
-					href="/landingbuilderslab"
-					class="inline-block bg-[#2BDA6E] text-black font-semibold px-6 py-3 rounded-lg shadow-md transition"
+					href="/landingbuilderslab/checkout"
+					class="flex flex-col max-w-[500px] w-full text-[20px] mx-auto bg-[#2BDA6E] text-black font-semibold px-6 py-4 rounded-lg shadow-md transition"
 				>
-					Quiero ver la guía completa
+					Obtener acceso ahora
+					<span class="font-medium text-[16px]">Protegido por garantia</span>
+				</a>
+			</div>
+		</div>
+		<div class="bg-white py-12 text-[20px] px-6 text-black leading-relaxed space-y-6 max-w-3xl mx-auto">
+
+			<p class="font-bold text-[20px]">Esto es lo que va a pasar ahora.</p>
+
+			<p>Vas a hacer clic en ese botón.</p>
+
+			<p>
+				Vas a pagar <span class="font-bold text-green-600">U$47</span> — que, seamos honestos, es menos de lo que gastas en dos salidas a comer.
+			</p>
+
+			<p>Vas a mirar los videos y armar tus documentos.</p>
+
+			<p>Tu cerebro va a explotar un poquito.</p>
+
+			<p>Vas a pausar al menos dos veces y pensar:</p>
+
+			<blockquote class="italic border-l-4 border-gray-400 pl-4 text-gray-700">
+				“Pará… ¿por qué no estaba haciendo esto antes?”
+			</blockquote>
+
+			<p>Y después — como si estuviera guionado — te van a empezar a llegar mensajes.</p>
+
+			<ul class="list-disc pl-6 space-y-1">
+				<li>Clientes.</li>
+				<li>Consultas.</li>
+				<li>Llamadas agendadas.</li>
+				<li>Notificaciones de pago.</li>
+				<li>Respeto.</li>
+			</ul>
+
+			<p>Porque ahora lo entendiste:</p>
+
+			<ul class="list-disc pl-6 space-y-1">
+				<li>No necesitás una agencia.</li>
+				<li>No necesitás un branding increíble.</li>
+				<li>No necesitás ser el Messi del diseño.</li>
+			</ul>
+
+			<p>
+				Solo necesitás una oferta concreta, con valor real, que te posiciones como la persona que tiene la solución justa para un problema urgente.
+			</p>
+
+			<p>Así es como armé mi sistema.</p>
+			<p>Así es como escalo mi negocio.</p>
+			<p>Así es como pasé de “freelancer frustrado” a “vendí otra landing mientras tomaba mates.”</p>
+
+			<p class="font-bold text-[20px]">¿Estás?</p>
+
+			<p class="text-[28px]">👇</p>
+
+		</div>
+		<div class="bg-gray-900 py-12 px-4">
+			<div class="text-center">
+				<h3 class="text-orange-400 font-bold italic text-[28px] mb-6 leading-[120%]">Obtene el Curso Completo por <span class="text-green-500 underline">U$47</span></h3>
+				<a
+					href="/landingbuilderslab/checkout"
+					class="flex flex-col max-w-[500px] w-full text-[20px] mx-auto bg-[#2BDA6E] text-black font-semibold px-6 py-4 rounded-lg shadow-md transition"
+				>
+					Obtener acceso ahora
+					<span class="font-medium text-[16px]">Protegido por garantia</span>
 				</a>
 			</div>
 		</div>
